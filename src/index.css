@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* -webkit-animation: cubic-bezier(0.55, 0.085, 0.68, 0.53) */
 }
 
 code {
