@@ -1,0 +1,17 @@
+#navigation-menu li {
+    display: inline;
+    margin: 15px;
+}
+
+.menu-column-1 {
+    display: inline-block;
+    width: 50%;
+    color: black;
+}
+
+.menu-column-2 {
+    /* display: inline-block; */
+    width: 50%;
+    color: black;
+    text-align: right;
+}

@@ -1,0 +1,65 @@
+.main-component {
+
+    justify-content: center;
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+}
+
+.parent-column{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.column1{
+    display: inline-block;
+    width: 15%;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.download-cv {
+    margin-top : 30px;
+}
+
+.column3{
+    display: inline-block;
+    width: 15%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    /* display: inline; */
+    margin: 35px;
+    padding: 0px;
+}
+
+img {
+    height: 40px;
+}
+
+.profile-summary {
+    /* padding: 10px; */
+    height: 75vh;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    margin: 5px;
+    border-radius: 5000px;
+    height: 35vh !important;
+}
+
+/* .body {
+    color: white
+} */
