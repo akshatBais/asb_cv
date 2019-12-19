@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+The following project is a search app based on Good Reads API .
 
-You can use the [editor on GitHub](https://github.com/akshatBais/akshat_singh_bais_cv/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### ListBooks
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### `npm start`
 
-```markdown
-Syntax highlighted code block
+There are two servers !!
+One for client side and other for server side.
+this command runs both the server. Check package.json file , which concurrently runs two servers one after the other
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+for internal api calling we are running the server side on port 3001 .
 
-# Header 1
-## Header 2
-### Header 3
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### `npm run build`
 
-**Bold** and _Italic_ and `Code` text
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### `npm run deploy`
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/akshatBais/akshat_singh_bais_cv/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This deploys the code . Using pre-deploy and deploy scripts in
+package.json . Run this on gitbash . Make sure the git is install in the computer
+This will deploy the code to the page :
+https://akshatbais.github.io/akshat_singh_bais_cv/
