@@ -1,6 +1,7 @@
 import React from 'react';
 import workExperience from './work-exp';
 import './WorkExperience.css'
+import { CircularProgress } from '@material-ui/core';
 class WorkExperience extends React.Component {
 
     constructor(props: any) {
@@ -23,12 +24,14 @@ class WorkExperience extends React.Component {
             <section id="experience">
                 <div className="work-experience">
                     <div>
-                        <span>
-                            Work
-                    </span>
-                        <span>
-                            Experience
-                    </span>
+                        {/* <span> */}
+                           <CircularProgress />
+                           <br />
+                           Under construction
+                    {/* </span> */}
+                        {/* <span>
+                               Under construction
+                    </span> */}
                     </div>
 
                 </div>
