@@ -22,7 +22,7 @@ class MainComponent extends React.Component {
 
     render() {
         return (
-            <div className="parent-column">
+            <div className="parent-column" id="#">
                 {/* <div className="column1">
                     Primary Skills
                     <ul>
@@ -35,10 +35,10 @@ class MainComponent extends React.Component {
                         <li><img src={require(baseUrl + "docker.png")} /></li>
                     </ul>
                 </div> */}
-                <div id="#" className="main-component">
+                <div  className="main-component">
                     <div className="profile-summary">
                         <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
-                        <h3 className="body">Hey !!<br></br> This is Akshat Singh Bais</h3>
+                        <h3  className="body">Hey !!<br></br> This is Akshat Singh Bais</h3>
                         <h4 className="body"> &#60; Full Stack Engineer /></h4>
                         <div className="body">Technology Enthusiast.
                       Demonstrated hand-on with several technologies both on front-end and back-end side. Love coding, developing logics and algorithms.

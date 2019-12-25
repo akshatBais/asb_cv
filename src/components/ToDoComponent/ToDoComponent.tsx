@@ -1,10 +1,14 @@
 import React from 'react';
 import axios from 'axios';
-import { Checkbox } from '@material-ui/core';
+import { Checkbox, Button, CircularProgress } from '@material-ui/core';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import '../ToDoComponent/ToDoComponent.css';
 
 interface todoItems {
     todoitems: [],
-    done: boolean
+    done: boolean,
+    checked: boolean[],
+    isButtonClicked: boolean
 }
 
 class ToDoComponent extends React.Component<{}, todoItems> {
@@ -13,34 +17,55 @@ class ToDoComponent extends React.Component<{}, todoItems> {
         super(props);
         this.state = {
             todoitems: [],
-            done: false
+            done: false,
+            checked: [],
+            isButtonClicked: true
         };
+        this.handleButtonClick = this.handleButtonClick.bind(this);
         this.handleCheckBoxClick = this.handleCheckBoxClick.bind(this);
     }
-    checked: boolean = true;
-    dynamicToDoItemArray: any = [];
+
     componentWillMount() {
         console.log("will mount");
         console.log(this.state)
         axios.get("http://localhost:8000/data/toDoDetails").then((res: any) => {
-            console.log(res.data);
-            this.setState({ todoitems: res.data[0].todoitems, done: true });
-            console.log(this.state);
+            this.setState({
+                todoitems: res.data[0].todoitems, done: true, checked: res.data[0].todoitems.map((item: any) => {
+                    if (item.status == 0) return false; else return true;
+                })
+            });
+            // console.log(this.state);
+            console.log("compoennt will mount");
         });
     }
 
-    // prepareToDoList() {
-    //     this.state['todoitems'].forEach((element: any) => {
-    //         this.dynamicToDoItemArray.push(<li>{element.task}</li>)
-    //     })
 
-    //     return this.dynamicToDoItemArray;
-    // }
 
     handleCheckBoxClick = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log("handle check is called");
-        console.log(event.target);
-        (this.checked) ? this.checked = false : this.checked = true;
+        let list = this.state.checked;
+        if (this.state.checked[parseInt(event.target.id)]) {
+            list[parseInt(event.target.id)] = false;
+            console.log("setting false")
+        } else {
+            list[parseInt(event.target.id)] = true;
+            console.log("setting true")
+        }
+        this.setState({ checked: list });
+
+    }
+
+    componentWillUpdate() {
+        console.log("component will update");
+        // console.log(this.state)
+    }
+
+    componentDidUpdate() {
+        console.log("component did update");
+    }
+
+    handleButtonClick() {
+        this.setState({ isButtonClicked: false });
     }
 
     render() {
@@ -48,25 +73,34 @@ class ToDoComponent extends React.Component<{}, todoItems> {
         if (!this.state.done) {
             return (
                 <div>
-                    Your To Do List is loading ....
+                   <CircularProgress />
                 </div>
             )
         } else {
-            console.log(this.state)
+            // console.log(this.state)
             return (
 
-                <section id="todolist">
-                    <div>
+                // <section id="todolist">
+                <div className="to-do-section">
+                    <div hidden= {!this.state.isButtonClicked} className='button-section'>
+                        <Button onClick={this.handleButtonClick}><AddCircleIcon></AddCircleIcon> Create a Task</Button>
+                    </div>
+                    <div hidden={this.state.isButtonClicked} className='add-task-box'>
+                        <textarea placeholder="Add a Task"></textarea>
+                    </div>
+                    <div className='to-do-list'>
                         <ul>
                             {this.state.todoitems.map((value: any, index: any) => {
                                 return <li key={index}>
-                                    <Checkbox id={`${index}`} checked={this.checked}
+                                    <Checkbox id={`${index}`} checked={this.state.checked[index] ? true : false}
                                         onChange={this.handleCheckBoxClick}></Checkbox>
                                     {value.task}</li>
                             })}
                         </ul>
                     </div>
-                </section>
+
+                </div>
+                // </section>
 
             )
         }

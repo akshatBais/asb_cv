@@ -48,7 +48,7 @@ img {
 }
 
 .profile-summary {
-    /* padding: 10px; */
+    flex-wrap: nowrap;
     height: 75vh;
     margin-top: 25px;
     margin-bottom: 30px;
@@ -60,6 +60,12 @@ img {
     height: 35vh !important;
 }
 
-/* .body {
-    color: white
-} */
+@media all and (max-width : 375px) {
+    .profile-picture{
+        height: 25vh;
+        border-radius: 2000px;
+    }
+    .body {
+        font-size: x-small;
+    }
+}
