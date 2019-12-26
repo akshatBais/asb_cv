@@ -6,46 +6,52 @@ import axios from 'axios';
 import download from 'downloadjs';
 const baseUrl = "./skills-images/";
 
-class MainComponent extends React.Component {
+interface MainInterface {
+    loading: boolean
+}
 
-    componentWillMount() {
-        
+class MainComponent extends React.Component<{}, MainInterface> {
+
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            loading: false
+        }
+        this.downloadCv = this.downloadCv.bind(this);
     }
+
 
     downloadCv() {
         console.log("downloading cv");
-        axios.get("http://localhost:8000/download/akshatcv").then((res: any) => {
-            const blob = new Blob([res.body])
+        this.setState({ loading: true });
+        axios("https://akshat-profile-node.herokuapp.com/download/akshatcv", {
+            method : 'GET',
+            responseType : 'blob'
+        }).then((res: any) => {
+            this.setState({ loading: false });
+            const blob = new Blob([res.data], { type: "application/pdf" })
             download(blob, 'akshat_bais_cv.pdf');
+            // const fileURL = URL.createObjectURL(blob);
+            //Open the URL on new Window
+            // window.open(fileURL);
         })
     }
 
     render() {
         return (
             <div className="parent-column" id="#">
-                {/* <div className="column1">
-                    Primary Skills
-                    <ul>
-                        <li>
-                            <img src={require(baseUrl + "angular.svg")} />
-                        </li>
-                        <li><img src={require(baseUrl + "nodejs.png")} /></li>
-                        <li><img src={require(baseUrl + "java.jpg")} /></li>
-                        <li><img src={require(baseUrl + "js.svg")} /></li>
-                        <li><img src={require(baseUrl + "docker.png")} /></li>
-                    </ul>
-                </div> */}
-                <div  className="main-component">
+
+                <div className="main-component">
                     <div className="profile-summary">
                         <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
-                        <h3  className="body">Hey !!<br></br> This is Akshat Singh Bais</h3>
+                        <h3 className="body">Hey !!<br></br> This is Akshat Singh Bais</h3>
                         <h4 className="body"> &#60; Full Stack Engineer /></h4>
                         <div className="body">Technology Enthusiast.
                       Demonstrated hand-on with several technologies both on front-end and back-end side. Love coding, developing logics and algorithms.
                       Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
                       </div>
                         <div className="download-cv">
-                            <Button onClick={this.downloadCv}><GetAppIcon /> Download CV</Button>
+                            <Button onClick={this.downloadCv}><GetAppIcon />{(this.state.loading) ? 'Downloading...' : 'Download CV'}</Button>
                         </div>
                     </div>
                 </div>

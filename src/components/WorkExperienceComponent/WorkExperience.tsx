@@ -25,24 +25,17 @@ class WorkExperience extends React.Component {
 
         return (
             <section id="experience" className="experience">
-                <Box display="flex" flexWrap="wrap" bgcolor="backgroumd.paper" justifyContent = "space-between">
+                <Box display="flex" flexWrap="wrap" bgcolor="backgroumd.paper" justifyContent="space-between">
                     <Box>
-                        ssssssssssssssssssssssssssssssssssssssssssssssssss
+                        <CircularProgress />This section is in Progress..
                     </Box>
                     <Box>
-                        aaasdasdds
+                        .
                     </Box>
                 </Box>
-                {/* <div>                        
-<CircularProgress />
-                        <br />
-                        Under construction
-                    </div> */}
             </section>
-
         )
     }
-
 }
 
 export default WorkExperience;
