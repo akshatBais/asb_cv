@@ -49,7 +49,7 @@ img {
 
 .profile-summary {
     flex-wrap: nowrap;
-    height: 75vh;
+    height: 85vh;
     margin-top: 25px;
     margin-bottom: 30px;
 }
@@ -60,9 +60,15 @@ img {
     height: 35vh !important;
 }
 
-@media all and (max-width : 375px) {
+@media all and (max-width : 420px) {
+    .profile-summary {
+        margin-top: 0px;;
+    }
+    .h3{
+        font-size: small;
+    }
     .profile-picture{
-        height: 25vh;
+        height: 15vh;
         border-radius: 2000px;
     }
     .body {
