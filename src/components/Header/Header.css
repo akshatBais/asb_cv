@@ -15,3 +15,8 @@
     color: black;
     text-align: right;
 }
+
+.drawer-items {
+    height: 100%;
+    margin: 5px;
+}
