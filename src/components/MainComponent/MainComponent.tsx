@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import axios from 'axios';
 import download from 'downloadjs';
-const baseUrl = "./skills-images/";
+// const baseUrl = "./skills-images/";
 
 interface MainInterface {
     loading: boolean
@@ -24,7 +24,7 @@ class MainComponent extends React.Component<{}, MainInterface> {
     downloadCv() {
         console.log("downloading cv");
         this.setState({ loading: true });
-        axios("https://akshat-profile-node.herokuapp.com/download/akshatcv", {
+        axios("http://localhost:8000/download/akshatcv", {
             method : 'GET',
             responseType : 'blob'
         }).then((res: any) => {

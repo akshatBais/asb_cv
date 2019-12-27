@@ -3,11 +3,19 @@ import '../ProjectsComponent/ProjectsComponent.css'
 import ToDoComponent from '../ToDoComponent/ToDoComponent';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
+import { makeStyles } from '@material-ui/core/styles';
 
 interface stateInterface {
     isDialogVisible: boolean
 }
-// var hello : Number;
+
+const useStyles = makeStyles({
+    root: {
+        minWidth: '300px'
+    }
+});
+
+
 class ProjectsComponent extends React.Component<{}, stateInterface> {
 
     constructor(props: any) {
@@ -15,8 +23,6 @@ class ProjectsComponent extends React.Component<{}, stateInterface> {
         this.state = {
             isDialogVisible: false
         }
-        // hello = "hey";
-
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleDialogClose = this.handleDialogClose.bind(this);
     }
@@ -29,8 +35,9 @@ class ProjectsComponent extends React.Component<{}, stateInterface> {
         this.setState({ isDialogVisible: false });
     }
 
-    
+
     render() {
+        // const classes = useStyles();
         return (
             <section id="projects">
                 <div className="projects-section">
