@@ -44,7 +44,9 @@ class ProjectsComponent extends React.Component<{}, stateInterface> {
                     In Progress
                     <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>TO DO APP</Button>
                     <Dialog open={this.state.isDialogVisible} onClose={this.handleDialogClose} aria-labelledby="simple-dialog-title">
+                    {/* <div draggable={true} className="to-do-app"> */}
                         <ToDoComponent />
+                    {/* </div> */}
                     </Dialog>
                 </div>
             </section>
