@@ -28,7 +28,7 @@ class ToDoComponent extends React.Component<{}, todoItems> {
     componentWillMount() {
         console.log("will mount");
         console.log(this.state)
-        axios.get("http://localhost:8000/data/toDoDetails").then((res: any) => {
+        axios.get("https://akshat-profile-node.herokuapp.com/data/toDoDetails").then((res: any) => {
             this.setState({
                 todoitems: res.data[0].todoitems, done: true, checked: res.data[0].todoitems.map((item: any) => {
                     if (item.status == 0) return false; else return true;

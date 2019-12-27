@@ -24,7 +24,7 @@ class MainComponent extends React.Component<{}, MainInterface> {
     downloadCv() {
         console.log("downloading cv");
         this.setState({ loading: true });
-        axios("http://localhost:8000/download/akshatcv", {
+        axios("https://akshat-profile-node.herokuapp.com/download/akshatcv", {
             method : 'GET',
             responseType : 'blob'
         }).then((res: any) => {
