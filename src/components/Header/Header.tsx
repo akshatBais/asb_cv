@@ -13,9 +13,13 @@ function Header() {
     createStyles({
       root: {
         background: 'white',
-        boxShadow: 'none'
+        boxShadow: 'none',
+        [theme.breakpoints.down('sm')]: {
+          height: '5vh',
+        },
       },
       toolBarProps: {
+        minHeight: '50px',
         justifyContent: 'center'
       },
       sectionDesktop: {
@@ -27,12 +31,17 @@ function Header() {
       },
       sectionMobile: {
         color: 'black',
+        height: '50px',
         [theme.breakpoints.down('sm')]: {
           display: 'flex',
         },
         [theme.breakpoints.up('sm')]: {
           display: 'none',
         }
+      },
+      menuButtonProps: {
+        // minHeight: '50px',
+        color: 'blue'
       },
       drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -69,14 +78,14 @@ function Header() {
             <li><a href="#">Home</a></li>
             <li><a href="#experience"> Work Experience</a></li>
             <li><a href="#projects"> Projects</a></li>
-            <li><a href="#projects"> Contact</a></li>
+            <li><a href="#contact"> Contact</a></li>
           </ul>
         </Toolbar>
       </div>
       <div className={classes.sectionMobile}>
         <Toolbar>
           <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen}>
-            <MenuIcon />
+            <MenuIcon classes={{root: classes.menuButtonProps}}/>
           </IconButton>
           {/* <Typography>
               Please help yourself through drawer to navigate
@@ -95,8 +104,9 @@ function Header() {
             <List><a href="#" onClick={handleDrawerClose}>Home</a></List>
             <Divider />
             <List><a href="#experience" onClick={handleDrawerClose}> Work Experience</a></List>
+            <Divider />
+            <List><a href="#contact" onClick={handleDrawerClose}>Contact</a></List>
           </div>
-
         </div>
       </Drawer>
 

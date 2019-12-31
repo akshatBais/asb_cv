@@ -8,6 +8,7 @@
 
 .parent-column{
     margin: 10px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
 }
@@ -39,8 +40,8 @@ ul {
 
 li {
     /* display: inline; */
-    margin: 35px;
-    padding: 0px;
+    /* margin: 35px !important; */
+    /* padding: 0px; */
 }
 
 img {

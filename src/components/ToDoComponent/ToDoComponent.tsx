@@ -71,17 +71,14 @@ class ToDoComponent extends React.Component<{}, todoItems> {
         console.log("inside render");
         if (!this.state.done) {
             return (
-                <div>
-                   <CircularProgress />
-                </div>
+                // <div>
+                <CircularProgress />
             )
         } else {
-            // console.log(this.state)
             return (
 
-                // <section id="todolist">
                 <div className="to-do-section">
-                    <div hidden= {!this.state.isButtonClicked} className='button-section'>
+                    <div hidden={!this.state.isButtonClicked} className='button-section'>
                         <Button onClick={this.handleButtonClick}><AddCircleIcon></AddCircleIcon> Create a Task</Button>
                     </div>
                     <div hidden={this.state.isButtonClicked} className='add-task-box'>

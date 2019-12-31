@@ -1,6 +1,26 @@
 .experience {
-    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    /* margin: 100px; */
+    padding: 20px;;
+}
+
+.experience-start{
+    margin: 100px;
+}
+
+.company-data{
+    display: inline-block;
+}
+
+.company-logo.company-name {
+    display: inline-block;
+}
+
+.experience-items{
+    order : 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-bottom: 30px;;
 }
