@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/akshat_singh_bais_cv/static/css/main.8ed9eb9f.chunk.css",
-    "main.js": "/akshat_singh_bais_cv/static/js/main.0647f98e.chunk.js",
-    "main.js.map": "/akshat_singh_bais_cv/static/js/main.0647f98e.chunk.js.map",
+    "main.js": "/akshat_singh_bais_cv/static/js/main.b9d55a43.chunk.js",
+    "main.js.map": "/akshat_singh_bais_cv/static/js/main.b9d55a43.chunk.js.map",
     "runtime-main.js": "/akshat_singh_bais_cv/static/js/runtime-main.84115ea0.js",
     "runtime-main.js.map": "/akshat_singh_bais_cv/static/js/runtime-main.84115ea0.js.map",
     "static/js/2.b96380fc.chunk.js": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js",
     "static/js/2.b96380fc.chunk.js.map": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js.map",
     "index.html": "/akshat_singh_bais_cv/index.html",
-    "precache-manifest.de0cfd779dc870e1a99f3513af8f72ed.js": "/akshat_singh_bais_cv/precache-manifest.de0cfd779dc870e1a99f3513af8f72ed.js",
+    "precache-manifest.04a041d74e87febffae4ba366bb0ffb9.js": "/akshat_singh_bais_cv/precache-manifest.04a041d74e87febffae4ba366bb0ffb9.js",
     "service-worker.js": "/akshat_singh_bais_cv/service-worker.js",
     "static/css/main.8ed9eb9f.chunk.css.map": "/akshat_singh_bais_cv/static/css/main.8ed9eb9f.chunk.css.map",
     "static/js/2.b96380fc.chunk.js.LICENSE": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js.LICENSE",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.84115ea0.js",
     "static/js/2.b96380fc.chunk.js",
     "static/css/main.8ed9eb9f.chunk.css",
-    "static/js/main.0647f98e.chunk.js"
+    "static/js/main.b9d55a43.chunk.js"
   ]
 }
