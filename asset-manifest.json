@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/akshat_singh_bais_cv/static/css/main.265fd6a9.chunk.css",
-    "main.js": "/akshat_singh_bais_cv/static/js/main.737e21f9.chunk.js",
-    "main.js.map": "/akshat_singh_bais_cv/static/js/main.737e21f9.chunk.js.map",
+    "main.css": "/akshat_singh_bais_cv/static/css/main.f106d8cf.chunk.css",
+    "main.js": "/akshat_singh_bais_cv/static/js/main.0647f98e.chunk.js",
+    "main.js.map": "/akshat_singh_bais_cv/static/js/main.0647f98e.chunk.js.map",
     "runtime-main.js": "/akshat_singh_bais_cv/static/js/runtime-main.84115ea0.js",
     "runtime-main.js.map": "/akshat_singh_bais_cv/static/js/runtime-main.84115ea0.js.map",
-    "static/js/2.bcf136d3.chunk.js": "/akshat_singh_bais_cv/static/js/2.bcf136d3.chunk.js",
-    "static/js/2.bcf136d3.chunk.js.map": "/akshat_singh_bais_cv/static/js/2.bcf136d3.chunk.js.map",
+    "static/js/2.b96380fc.chunk.js": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js",
+    "static/js/2.b96380fc.chunk.js.map": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js.map",
     "index.html": "/akshat_singh_bais_cv/index.html",
-    "precache-manifest.a821eee1caaacd7342f040ddd4bd8449.js": "/akshat_singh_bais_cv/precache-manifest.a821eee1caaacd7342f040ddd4bd8449.js",
+    "precache-manifest.3292dfdf1d6e8c9a4d7859305afc9e58.js": "/akshat_singh_bais_cv/precache-manifest.3292dfdf1d6e8c9a4d7859305afc9e58.js",
     "service-worker.js": "/akshat_singh_bais_cv/service-worker.js",
-    "static/css/main.265fd6a9.chunk.css.map": "/akshat_singh_bais_cv/static/css/main.265fd6a9.chunk.css.map",
-    "static/js/2.bcf136d3.chunk.js.LICENSE": "/akshat_singh_bais_cv/static/js/2.bcf136d3.chunk.js.LICENSE",
-    "static/media/asb.jpg": "/akshat_singh_bais_cv/static/media/asb.d63ad553.jpg"
+    "static/css/main.f106d8cf.chunk.css.map": "/akshat_singh_bais_cv/static/css/main.f106d8cf.chunk.css.map",
+    "static/js/2.b96380fc.chunk.js.LICENSE": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js.LICENSE",
+    "static/media/angular.svg": "/akshat_singh_bais_cv/static/media/angular.4c732369.svg",
+    "static/media/asb.jpg": "/akshat_singh_bais_cv/static/media/asb.d63ad553.jpg",
+    "static/media/docker.png": "/akshat_singh_bais_cv/static/media/docker.2103c445.png",
+    "static/media/elk.png": "/akshat_singh_bais_cv/static/media/elk.56e55957.png",
+    "static/media/java.jpg": "/akshat_singh_bais_cv/static/media/java.eaf164c0.jpg",
+    "static/media/js.svg": "/akshat_singh_bais_cv/static/media/js.2d2e31cc.svg",
+    "static/media/nodejs.png": "/akshat_singh_bais_cv/static/media/nodejs.d42672d4.png",
+    "static/media/react.png": "/akshat_singh_bais_cv/static/media/react.47ce6e77.png"
   },
   "entrypoints": [
     "static/js/runtime-main.84115ea0.js",
-    "static/js/2.bcf136d3.chunk.js",
-    "static/css/main.265fd6a9.chunk.css",
-    "static/js/main.737e21f9.chunk.js"
+    "static/js/2.b96380fc.chunk.js",
+    "static/css/main.f106d8cf.chunk.css",
+    "static/js/main.0647f98e.chunk.js"
   ]
 }
