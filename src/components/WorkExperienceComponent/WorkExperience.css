@@ -24,3 +24,9 @@
     flex-shrink: 1;
     margin-bottom: 30px;;
 }
+
+@media all and (max-width : 420px) {
+    .experience-start{
+        margin: 60px;
+    }
+}

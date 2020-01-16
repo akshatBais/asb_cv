@@ -38,11 +38,6 @@ ul {
     margin: 0px;
 }
 
-li {
-    /* display: inline; */
-    /* margin: 35px !important; */
-    /* padding: 0px; */
-}
 
 img {
     height: 40px;
@@ -69,7 +64,7 @@ img {
         font-size: small;
     }
     .profile-picture{
-        height: 15vh;
+        height: 15vh !important;
         border-radius: 2000px;
     }
     .body {

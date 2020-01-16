@@ -20,7 +20,8 @@ const App: React.FC = () => {
         <Divider />
         <WorkExperience />
         <Divider />
-        <ProjectsComponent />
+        {/* <ProjectsComponent /> */}
+        <SkillsComponent />
         <Divider />
         <ContactComponent />
       </div>

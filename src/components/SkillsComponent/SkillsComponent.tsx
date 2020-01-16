@@ -15,9 +15,6 @@ function imagePathBuilder() {
 }
 class SkillsComponent extends React.Component {
 
-
-
-
     componentWillMount() {
     }
 
@@ -31,7 +28,7 @@ class SkillsComponent extends React.Component {
 
     render() {
         return (
-            <div id="about" className="skills-component">
+            <div id="skills" className="skills-component">
                 <div className="skills-summary">
                     {/* <br></br> */}
                     <h2>Primary Skills</h2>

@@ -23,8 +23,8 @@
     border-radius: 100px;
     margin: 20px;
     height: 40px;
-    ;
 }
+
 
 input {
     border-radius: 200px;
@@ -35,6 +35,7 @@ input {
     margin-left: 20px;
     ;
 }
+m
 
 textarea {
     text-align: center;
@@ -52,10 +53,9 @@ textarea {
     ;
 }
 
-@media all and (max-width : 420px) {
+@media all and (max-width : 600px) {
     .contact-information {
         margin: 70px;
-        ;
     }
 
     .form-control {

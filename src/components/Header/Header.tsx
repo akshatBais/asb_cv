@@ -77,7 +77,8 @@ function Header() {
           <ul id="navigation-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#experience"> Work Experience</a></li>
-            <li><a href="#projects"> Projects</a></li>
+            {/* <li><a href="#projects"> Projects</a></li> */}
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact"> Contact</a></li>
           </ul>
         </Toolbar>

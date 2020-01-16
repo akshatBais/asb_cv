@@ -15,12 +15,9 @@ class ContactComponent extends React.Component<{}, ContactInformation> {
     constructor(props: any) {
         super(props);
         this.state = {
-
             name: "",
             contactNumber: 0,
             InstitutionName: "",
-
-
         }
 
         this.haandleFormSubmit = this.haandleFormSubmit.bind(this);
