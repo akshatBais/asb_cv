@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/akshat_singh_bais_cv/static/css/main.f106d8cf.chunk.css",
+    "main.css": "/akshat_singh_bais_cv/static/css/main.8ed9eb9f.chunk.css",
     "main.js": "/akshat_singh_bais_cv/static/js/main.0647f98e.chunk.js",
     "main.js.map": "/akshat_singh_bais_cv/static/js/main.0647f98e.chunk.js.map",
     "runtime-main.js": "/akshat_singh_bais_cv/static/js/runtime-main.84115ea0.js",
@@ -8,9 +8,9 @@
     "static/js/2.b96380fc.chunk.js": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js",
     "static/js/2.b96380fc.chunk.js.map": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js.map",
     "index.html": "/akshat_singh_bais_cv/index.html",
-    "precache-manifest.3292dfdf1d6e8c9a4d7859305afc9e58.js": "/akshat_singh_bais_cv/precache-manifest.3292dfdf1d6e8c9a4d7859305afc9e58.js",
+    "precache-manifest.de0cfd779dc870e1a99f3513af8f72ed.js": "/akshat_singh_bais_cv/precache-manifest.de0cfd779dc870e1a99f3513af8f72ed.js",
     "service-worker.js": "/akshat_singh_bais_cv/service-worker.js",
-    "static/css/main.f106d8cf.chunk.css.map": "/akshat_singh_bais_cv/static/css/main.f106d8cf.chunk.css.map",
+    "static/css/main.8ed9eb9f.chunk.css.map": "/akshat_singh_bais_cv/static/css/main.8ed9eb9f.chunk.css.map",
     "static/js/2.b96380fc.chunk.js.LICENSE": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js.LICENSE",
     "static/media/angular.svg": "/akshat_singh_bais_cv/static/media/angular.4c732369.svg",
     "static/media/asb.jpg": "/akshat_singh_bais_cv/static/media/asb.d63ad553.jpg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.84115ea0.js",
     "static/js/2.b96380fc.chunk.js",
-    "static/css/main.f106d8cf.chunk.css",
+    "static/css/main.8ed9eb9f.chunk.css",
     "static/js/main.0647f98e.chunk.js"
   ]
 }
