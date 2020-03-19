@@ -25,6 +25,7 @@ class ContactComponent extends React.Component<{}, ContactInformation> {
     }
 
     haandleFormSubmit() {
+        console.log("submit button called")
     }
 
     handleInput(e: React.FormEvent<HTMLInputElement>) {
