@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import MainComponent from './components/MainComponent/MainComponent';
 import SkillsComponent from './components/SkillsComponent/SkillsComponent';
 import WorkExperience from './components/WorkExperienceComponent/WorkExperience';
@@ -24,7 +25,9 @@ const App: React.FC = () => {
         <SkillsComponent />
         <Divider />
         <ContactComponent />
+        
       </div>
+      <Footer />
     </div >
 
   );

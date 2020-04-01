@@ -36,19 +36,19 @@ class SkillsComponent extends React.Component {
                         <li>
                         {/* {imagePathBuilder()} */}
                             {/* <div style={{width:"image width px",fontSize:"80%" , textAlign:"center"}}> */}
-                            <img src={require(baseUrl + "angular.svg")} />
+                            <img className="skill-img" src={require(baseUrl + "angular.svg")} />
                             {/* angular */}
                             {/* </div> */}
                         </li>
-                        <li><img src={require(baseUrl + "nodejs.png")} /></li>
-                        <li><img src={require(baseUrl + "java.jpg")} /></li>
-                        <li><img src={require(baseUrl + "js.svg")} /></li>
-                        <li><img src={require(baseUrl + "docker.png")} /></li>
+                        <li><img className="skill-img" src={require(baseUrl + "nodejs.png")} /></li>
+                        <li><img className="skill-img" src={require(baseUrl + "java.jpg")} /></li>
+                        <li><img className="skill-img" src={require(baseUrl + "js.svg")} /></li>
+                        <li><img className="skill-img" src={require(baseUrl + "docker.png")} /></li>
                     </ul>
                     <h2>Secondary Skills</h2>
                     <ul>
-                        <li><img src={require(baseUrl + "elk.png")} /></li>
-                        <li><img src={require(baseUrl + "react.png")} /></li>
+                        <li><img className="skill-img" src={require(baseUrl + "elk.png")} /></li>
+                        <li><img className="skill-img" src={require(baseUrl + "react.png")} /></li>
                         <li>C++</li>
                     </ul>
                 </div>
