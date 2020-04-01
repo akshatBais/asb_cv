@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53e9803b7f6cbc36d37125f13c536b3c",
+    "revision": "86fedbd26913b92fcd22d70ffbc72945",
     "url": "/akshat_singh_bais_cv/index.html"
   },
   {
-    "revision": "ec771bd02dc86a365a80",
-    "url": "/akshat_singh_bais_cv/static/css/main.8ed9eb9f.chunk.css"
+    "revision": "836622952e72dd8f17a0",
+    "url": "/akshat_singh_bais_cv/static/css/main.7bce399b.chunk.css"
   },
   {
-    "revision": "6a700fbc886cec77c58a",
-    "url": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js"
+    "revision": "ec1a3ae2f4710880ef40",
+    "url": "/akshat_singh_bais_cv/static/js/2.f4e415fc.chunk.js"
   },
   {
     "revision": "05240dc2b788313211b91a068a8ad167",
-    "url": "/akshat_singh_bais_cv/static/js/2.b96380fc.chunk.js.LICENSE"
+    "url": "/akshat_singh_bais_cv/static/js/2.f4e415fc.chunk.js.LICENSE"
   },
   {
-    "revision": "ec771bd02dc86a365a80",
-    "url": "/akshat_singh_bais_cv/static/js/main.b9d55a43.chunk.js"
+    "revision": "836622952e72dd8f17a0",
+    "url": "/akshat_singh_bais_cv/static/js/main.74a4f87f.chunk.js"
   },
   {
     "revision": "1d497da991b35a5e58c1",
@@ -48,11 +48,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/akshat_singh_bais_cv/static/media/js.2d2e31cc.svg"
   },
   {
+    "revision": "c1513ba60ad15b2d8f915ea502314189",
+    "url": "/akshat_singh_bais_cv/static/media/li.c1513ba6.webp"
+  },
+  {
     "revision": "d42672d4d185739d26257ed5c653c740",
     "url": "/akshat_singh_bais_cv/static/media/nodejs.d42672d4.png"
   },
   {
     "revision": "47ce6e77f039020ee2e76a10c1e988e9",
     "url": "/akshat_singh_bais_cv/static/media/react.47ce6e77.png"
+  },
+  {
+    "revision": "d4e0338bf15d9cb53a50bec0211ec9e0",
+    "url": "/akshat_singh_bais_cv/static/media/t.d4e0338b.webp"
   }
 ]);
