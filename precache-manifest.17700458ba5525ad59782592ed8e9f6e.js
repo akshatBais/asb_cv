@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44bac413603a1198796b1ef95f0edf07",
+    "revision": "13d8a0833c35ac86f394d0c2bda455f7",
     "url": "/akshat_singh_bais_cv/index.html"
   },
   {
-    "revision": "848166ba788cebca3899",
-    "url": "/akshat_singh_bais_cv/static/css/main.39869287.chunk.css"
+    "revision": "ca6e495be84dc0af10d7",
+    "url": "/akshat_singh_bais_cv/static/css/main.4649353c.chunk.css"
   },
   {
     "revision": "886e48e0b09ea28b7852",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/akshat_singh_bais_cv/static/js/2.36d44e72.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "848166ba788cebca3899",
-    "url": "/akshat_singh_bais_cv/static/js/main.686eb2b0.chunk.js"
+    "revision": "ca6e495be84dc0af10d7",
+    "url": "/akshat_singh_bais_cv/static/js/main.8246124e.chunk.js"
   },
   {
     "revision": "585284254c6da3b52376",
