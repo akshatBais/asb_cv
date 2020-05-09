@@ -54,6 +54,7 @@ textarea {
     ;
 }
 
+
 @media all and (max-width : 600px) {
     .contact-information {
         margin: 70px;

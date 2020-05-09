@@ -98,7 +98,8 @@ function Header() {
       }} ModalProps={{ onBackdropClick: handleDrawerClose }}>
         <div className="drawer-items">
           <div>
-            Hello ! Again !
+            {/* <img src */}So you are on mobile ? tab ? <br></br>
+            Try the pc version as well.
           </div>
           <div className={classes.dwarerItems}>
             <Divider />
@@ -106,7 +107,10 @@ function Header() {
             <Divider />
             <List><a href="#experience" onClick={handleDrawerClose}> Work Experience</a></List>
             <Divider />
+            <List><a href="#skills" onClick={handleDrawerClose}>Skills</a></List>
+            <Divider />
             <List><a href="#contact" onClick={handleDrawerClose}>Contact</a></List>
+            
           </div>
         </div>
       </Drawer>

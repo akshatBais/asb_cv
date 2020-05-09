@@ -34,6 +34,12 @@ class MainComponent extends React.Component<{}, MainInterface> {
             // const fileURL = URL.createObjectURL(blob);
             //Open the URL on new Window
             // window.open(fileURL);
+        }).catch(err => {
+            this.setState({ loading: false });
+            console.log("Error Occurred while downloafing")
+        }).finally(() => {
+            this.setState({ loading: false });
+
         })
     }
 
@@ -52,7 +58,7 @@ class MainComponent extends React.Component<{}, MainInterface> {
                           Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
                       </div>
                             <div className="download-cv">
-                                <Button onClick={this.downloadCv}>
+                                <Button disabled={this.state.loading} onClick={this.downloadCv}>
                                     <GetAppIcon />
                                     {(this.state.loading) ? 'Downloading...' : ' Download CV'}
                                 </Button>

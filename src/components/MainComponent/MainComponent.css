@@ -58,16 +58,17 @@ ul {
 
 @media all and (max-width : 420px) {
     .profile-summary {
-        margin-top: 0px;;
+        margin-top: 10px;;
     }
     /* .h3{
         font-size: small;
     } */
     .profile-picture{
-        height: 15vh !important;
+        height: 20vh !important;
         border-radius: 2000px;
+        margin-bottom: 5px;
     }
     .body {
-        font-size: x-small;
+        font-size: small;
     }
 }
