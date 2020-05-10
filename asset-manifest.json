@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/asb_cv/static/css/main.a82baf22.chunk.css",
-    "main.js": "/asb_cv/static/js/main.18ccea54.chunk.js",
-    "main.js.map": "/asb_cv/static/js/main.18ccea54.chunk.js.map",
+    "main.css": "/asb_cv/static/css/main.7a0d2ebc.chunk.css",
+    "main.js": "/asb_cv/static/js/main.9e2f5d25.chunk.js",
+    "main.js.map": "/asb_cv/static/js/main.9e2f5d25.chunk.js.map",
     "runtime-main.js": "/asb_cv/static/js/runtime-main.d1a7fb6e.js",
     "runtime-main.js.map": "/asb_cv/static/js/runtime-main.d1a7fb6e.js.map",
-    "static/js/2.1ceacbb1.chunk.js": "/asb_cv/static/js/2.1ceacbb1.chunk.js",
-    "static/js/2.1ceacbb1.chunk.js.map": "/asb_cv/static/js/2.1ceacbb1.chunk.js.map",
+    "static/js/2.78edc754.chunk.js": "/asb_cv/static/js/2.78edc754.chunk.js",
+    "static/js/2.78edc754.chunk.js.map": "/asb_cv/static/js/2.78edc754.chunk.js.map",
     "index.html": "/asb_cv/index.html",
-    "precache-manifest.e30b45a7e26e03596c8ba9f0e1bd1b8b.js": "/asb_cv/precache-manifest.e30b45a7e26e03596c8ba9f0e1bd1b8b.js",
+    "precache-manifest.76f655032f8b1110b1ba9d4ff0e5d5d2.js": "/asb_cv/precache-manifest.76f655032f8b1110b1ba9d4ff0e5d5d2.js",
     "service-worker.js": "/asb_cv/service-worker.js",
-    "static/css/main.a82baf22.chunk.css.map": "/asb_cv/static/css/main.a82baf22.chunk.css.map",
-    "static/js/2.1ceacbb1.chunk.js.LICENSE.txt": "/asb_cv/static/js/2.1ceacbb1.chunk.js.LICENSE.txt",
+    "static/css/main.7a0d2ebc.chunk.css.map": "/asb_cv/static/css/main.7a0d2ebc.chunk.css.map",
+    "static/js/2.78edc754.chunk.js.LICENSE.txt": "/asb_cv/static/js/2.78edc754.chunk.js.LICENSE.txt",
     "static/media/angular.svg": "/asb_cv/static/media/angular.4c732369.svg",
     "static/media/asb.jpg": "/asb_cv/static/media/asb.d63ad553.jpg",
     "static/media/docker.png": "/asb_cv/static/media/docker.2103c445.png",
@@ -21,12 +21,14 @@
     "static/media/li.webp": "/asb_cv/static/media/li.c1513ba6.webp",
     "static/media/nodejs.png": "/asb_cv/static/media/nodejs.d42672d4.png",
     "static/media/react.png": "/asb_cv/static/media/react.47ce6e77.png",
-    "static/media/t.webp": "/asb_cv/static/media/t.d4e0338b.webp"
+    "static/media/t.webp": "/asb_cv/static/media/t.d4e0338b.webp",
+    "static/media/tcs.svg.png": "/asb_cv/static/media/tcs.svg.b451c5cd.png",
+    "static/media/v18.webp": "/asb_cv/static/media/v18.7a82d4a9.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.d1a7fb6e.js",
-    "static/js/2.1ceacbb1.chunk.js",
-    "static/css/main.a82baf22.chunk.css",
-    "static/js/main.18ccea54.chunk.js"
+    "static/js/2.78edc754.chunk.js",
+    "static/css/main.7a0d2ebc.chunk.css",
+    "static/js/main.9e2f5d25.chunk.js"
   ]
 }
