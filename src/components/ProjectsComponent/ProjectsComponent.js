@@ -5,9 +5,9 @@ import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import { makeStyles } from '@material-ui/core/styles';
 
-interface stateInterface {
-    isDialogVisible: boolean
-}
+// interface stateInterface {
+//     isDialogVisible: boolean
+// }
 
 const useStyles = makeStyles({
     root: {
@@ -16,9 +16,9 @@ const useStyles = makeStyles({
 });
 
 
-class ProjectsComponent extends React.Component<{}, stateInterface> {
+class ProjectsComponent extends React.Component {
 
-    constructor(props: any) {
+    constructor(props) {
         super(props);
         this.state = {
             isDialogVisible: false
