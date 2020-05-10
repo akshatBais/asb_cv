@@ -1,0 +1,77 @@
+.contact {
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.contact-information {
+    margin: 100px;
+    ;
+    width: 100%;
+    text-align: center;
+}
+
+.form-details {
+    flex-wrap: wrap;
+}
+
+.form-control {
+    text-align: center;
+    display: inline-flex;
+    width: 60%;
+    border: solid rgb(178, 161, 194);
+    border-radius: 100px;
+    margin: 20px;
+    height: 40px;
+}
+
+
+input {
+    border-radius: 200px;
+    height: auto;
+    border: 0px;
+    width: 100%;
+    outline: none;
+    margin-left: 20px;
+    ;
+}
+
+
+textarea {
+    text-align: center;
+    display: inline-flex;
+    width: 60%;
+    border: solid rgb(178, 161, 194);
+    border-radius: 20px;
+    margin: 20px;
+    outline: none;
+    min-height: 100px;
+    justify-content: center;
+}
+
+.MuiSvgIcon-root {
+    margin: 10px;
+}
+
+
+@media all and (max-width : 600px) {
+    .contact-information {
+        margin: 70px;
+    }
+
+    .form-control {
+        text-align: center;
+        display: inline-flex;
+        width: 100%;
+        border: solid rgb(178, 161, 194);
+        border-radius: 100px;
+        margin-left: 0px;
+        /* margin-right: 20px;; */
+        height: 40px;
+        ;
+    }
+
+    .message {
+        font-size: small;
+    }
+}

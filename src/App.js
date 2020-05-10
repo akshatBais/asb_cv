@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Divider } from '@material-ui/core';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import MainComponent from './components/MainComponent/MainComponent';
+import SkillsComponent from './components/SkillsComponent/SkillsComponent';
+import ContactComponent from './components/ContactComponent/ContactComponent';
+import WorkExperience from './components/WorkExperienceComponent/WorkExperience';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className="profile">
+        <Header />
+        <div className="profile-body">
+        <MainComponent />
+        <Divider />
+        <WorkExperience />
+        <Divider />
+        <SkillsComponent />
+        <Divider />
+        <ContactComponent />
+        </div>
+     
+      <Footer />
+    </div >
+  )
 }
 
 export default App;
