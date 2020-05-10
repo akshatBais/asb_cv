@@ -26,7 +26,7 @@ class WorkExperience extends React.Component {
                 <Divider />
                 <div className="experience-start">
                     <div className="experience-items">
-                        <div className="company-data"><div className="company-logo">Logo </div><div className="company-name"><b><h3>Viacom18</h3></b></div></div>
+                        <div className="company-data"><div className="company-logo"> <img className="company-logo" src={require("./images/v18.webp")} alt="" /> </div><div className="company-name"><b><h3></h3></b></div></div>
                         <div><span><i >From : Jan, 2019 - To : Dec, 2019</i></span></div>
                         <br></br>
                         <div>
@@ -50,7 +50,7 @@ class WorkExperience extends React.Component {
                     </div>
 
                     <div className="experience-items">
-                        <div className="company-data"><div className="company-logo">Logo </div><div className="company-name"><b><h3>Tata Consultancy Services</h3></b></div></div>
+                        <div className="company-data"><div className="company-logo"><img className="company-logo" src={require("./images/tcs.svg.png")} alt="" /> </div><div className="company-name"><b><h3></h3></b></div></div>
                         <div><span><i>From September 2016 - To : Jan, 2019</i></span></div>
                         <br></br>
                         <ul>

@@ -6,6 +6,11 @@
     padding: 20px;;
 }
 
+.company-logo {
+    width: 35%;
+    height : 20%;
+}
+
 .experience-start{
     margin: 100px;
 }

@@ -38,15 +38,19 @@ input {
 
 
 textarea {
-    text-align: center;
+    /* text-align: center; */
     display: inline-flex;
-    width: 60%;
+    width: 50%;
     border: solid rgb(178, 161, 194);
     border-radius: 20px;
     margin: 20px;
     outline: none;
+    padding: 1em 16px 1em 1em;
     min-height: 100px;
     justify-content: center;
+    resize : none;
+    white-space: nowrap; 
+    outline-offset: 15px;
 }
 
 .MuiSvgIcon-root {
@@ -60,15 +64,21 @@ textarea {
     }
 
     .form-control {
+        padding: 1em 16px 1em 1em;
         text-align: center;
         display: inline-flex;
-        width: 100%;
+        width: 90%;
         border: solid rgb(178, 161, 194);
         border-radius: 100px;
         margin-left: 0px;
+        justify-content: center;
         /* margin-right: 20px;; */
         height: 40px;
         ;
+    }
+
+    textarea {
+        width: 80%;
     }
 
     .message {

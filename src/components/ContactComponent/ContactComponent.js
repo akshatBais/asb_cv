@@ -29,7 +29,7 @@ class ContactComponent extends React.Component {
     // event: React.FormEvent<HTMLFormElement>
     haandleFormSubmit() {
         // event.preventDefault();https://akshat-profile-node.herokuapp.com
-        httpcall("post", "http://localhost:8000/data/addClient", this.state , "SUCESS").then(() => {
+        httpcall("post", "https://akshat-profile-node.herokuapp.com/data/addClient", this.state , "SUCESS").then(() => {
             // console.log("saved");
             this.setState({
                 message : "",
@@ -78,14 +78,14 @@ class ContactComponent extends React.Component {
                     {/* onSubmit={this.haandleFormSubmit} */}
                     <form id="formRef" className="form-details"  >
                         <div className="form-control">
-                            <input title={"Full Name"} name={"name"} value={this.state.name} placeholder={"Please enter Your Name"} onChange={this.handleInput} />
+                            <input title={"Full Name"} name={"name"} value={this.state.name} placeholder={"Enter Your Name"} onChange={this.handleInput} />
                         </div>
                         <div className="form-control">
+                            <input type="number" name={"contactNumber"} value={this.state.contactNumber === 0 ? "" : this.state.contactNumber} placeholder={"Contact number"} onChange={this.handleInput} />
                             <CallIcon />
-                            <input type="number" name={"contactNumber"} value={this.state.contactNumber === 0 ? "" : this.state.contactNumber} placeholder={"Please Enter Your Contact number"} onChange={this.handleInput} />
                         </div>
                         <div className="form-control-textarea">
-                            <textarea placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
+                            <textarea  placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
                         </div>
                         <Button variant="outlined" color="primary" disabled={this.state.name == "" ? true : false }
                          className={classes.margin}  onClick={this.haandleFormSubmit}>
