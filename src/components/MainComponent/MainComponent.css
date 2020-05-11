@@ -22,7 +22,7 @@
 }
 
 .download-cv {
-    margin-top : 30px;
+    margin-top : 40px;
 }
 
 .column3{
@@ -46,30 +46,33 @@ ul {
 .profile-summary {
     flex-wrap: nowrap;
     height: 85vh;
+    padding: 10px;
     margin-top: 25px;
     margin-bottom: 30px;
-    font-size: medium;
+    font-size: large;
 }
 
 .profile-picture {
-    margin: 5px;
+    margin: 10px;
     border-radius: 5000px;
     height: 35vh !important;
 }
 
-@media all and (max-width : 420px) {
+@media all and (max-width : 600px) {
     .profile-summary {
-        margin-top: 10px;;
+        margin-top: 10px;
+        font-size: medium;
+        padding: 0 10px 0 10px;
     }
     /* .h3{
         font-size: small;
     } */
     .profile-picture{
-        height: 20vh !important;
+        height: 30vh !important;
         border-radius: 2000px;
         margin-bottom: 5px;
     }
     .body {
-        font-size: small;
+        /* font-size: small; */
     }
 }

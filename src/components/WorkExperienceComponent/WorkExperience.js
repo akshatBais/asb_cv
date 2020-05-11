@@ -43,7 +43,7 @@ class WorkExperience extends React.Component {
                                 
                                 <li className="list-items"><strong><u>Project : Setting up ELK stack</u></strong> : Deploying elasticsearch , logstash and kibana via docker containers and communicating using ssl and displaying application
                                  logs attaching docker volumes for better visibility of development logs for developers. Also creating data visualization dashboards for monitoring maximum searched keyword and other user activities</li>
-                                <li className="list-items">Developed a generic <strong>pop-up module</strong> using Angular 7. Used for showing Success, Warning and Error messages</li>
+                                <li className="list-items">Developed a generic <strong>pop-up module</strong> using Angular 7. Used for showing Success, Warning and Error</li>
                             </ul>
                         </div>
 
@@ -57,7 +57,7 @@ class WorkExperience extends React.Component {
                         <ul>
                             <li className="list-items">Responsible for building a <strong>monitoring engine</strong> for Lending Domain</li>
                             <li className="list-items">Making <strong>REST Services, controllers</strong> and process components for business logics using <strong> Java , Spring</strong></li>
-                            <br></br>
+                            
                             <li className="list-items"><strong><u>Global Error Handler and Logs for Audit Purpose</u></strong></li>
                             <li className="list-items">As a part of this component, made directives in Angular which can be used in any application for logging
                                 user actions.

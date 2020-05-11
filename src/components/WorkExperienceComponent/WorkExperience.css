@@ -12,7 +12,9 @@
 }
 
 .experience-start{
-    margin: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 0 50px 0 50px;
 }
 
 .company-data{
@@ -29,7 +31,7 @@
 } */
 
 .list-items {
-    font-size: small;
+    font-size: medium;
     float: left;
     margin: 4px;
 }
@@ -38,14 +40,22 @@
     order : 1;
     flex-grow: 1;
     flex-shrink: 1;
-    min-height: 200px;
-    margin-top: 10px;
-    /* margin: 30px;; */
+    min-height: 250px;
+    margin-top: 30px;
+    margin: 30px;;
+    padding: 0 10px 0 10px;
 }
 
 @media all and (max-width : 600px) {
     .experience-start{
         margin: 60px;
+        padding: 0px;
+        margin: 10px;
+    }
+
+    .experience-items {
+        min-height: 300px;;
+        padding: 0px;
     }
 
     .company-logo {
