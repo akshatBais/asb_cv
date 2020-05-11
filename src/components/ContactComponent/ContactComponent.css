@@ -53,6 +53,12 @@ textarea {
     outline-offset: 15px;
 }
 
+.thankyou-message {
+    margin: 30px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
 .MuiSvgIcon-root {
     margin: 10px;
 }

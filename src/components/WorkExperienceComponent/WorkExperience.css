@@ -43,9 +43,14 @@
     /* margin: 30px;; */
 }
 
-@media all and (max-width : 420px) {
+@media all and (max-width : 600px) {
     .experience-start{
         margin: 60px;
+    }
+
+    .company-logo {
+        width: 55%;
+        height : 20%;
     }
 
 }

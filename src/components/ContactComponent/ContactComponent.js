@@ -10,7 +10,7 @@ const styles = theme => ({
         margin : theme.spacing(1)
     }
 })
-
+// let dissableSubmitButton = true;
 
 class ContactComponent extends React.Component {
 
@@ -19,12 +19,18 @@ class ContactComponent extends React.Component {
         this.state = {
             name: "",
             contactNumber: 0,
-            message : ""
+            message : "",
+            isFormDisabled : false
         };
         
         this.haandleFormSubmit = this.haandleFormSubmit.bind(this);
         this.handleInput = this.handleInput.bind(this);
         this.handleTextArea = this.handleTextArea.bind(this);
+        this.sendAnotherMessage = this.sendAnotherMessage.bind(this);
+    }
+
+    sendAnotherMessage() {
+        this.setState({ isFormDisabled : false     })
     }
     // event: React.FormEvent<HTMLFormElement>
     haandleFormSubmit() {
@@ -35,8 +41,9 @@ class ContactComponent extends React.Component {
                 message : "",
                 name: "",
                 contactNumber: 0,
+                isFormDisabled : true
             });
-        });
+        })
         console.log("submit button called")
     }
 
@@ -76,7 +83,7 @@ class ContactComponent extends React.Component {
                     </p>
                     </div>
                     {/* onSubmit={this.haandleFormSubmit} */}
-                    <form id="formRef" className="form-details"  >
+                    <form id="formRef" hidden={this.state.isFormDisabled} className="form-details"  >
                         <div className="form-control">
                             <input title={"Full Name"} name={"name"} value={this.state.name} placeholder={"Enter Your Name"} onChange={this.handleInput} />
                         </div>
@@ -87,12 +94,20 @@ class ContactComponent extends React.Component {
                         <div className="form-control-textarea">
                             <textarea  placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
                         </div>
-                        <Button variant="outlined" color="primary" disabled={this.state.name == "" ? true : false }
-                         className={classes.margin}  onClick={this.haandleFormSubmit}>
+                        <Button disabled={this.state.name == "" ? true : false}  variant="outlined" color="primary"  className={classes.margin}  onClick={this.haandleFormSubmit}>
                             Send To Akshat
                         </Button>
                         {/* <button className = "send-data">Send Data</button> */}
                     </form>
+                    <div className="thankyou-message" hidden = {!this.state.isFormDisabled}>
+                        Thankyou For your reaching me !
+                        <div>
+                            To drop another message please click below.
+                            <div>
+                            <Button size="small" variant="outlined" color="primary" onClick={this.sendAnotherMessage}>Drop Another Message</Button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

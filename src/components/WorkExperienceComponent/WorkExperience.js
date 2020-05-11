@@ -37,12 +37,13 @@ class WorkExperience extends React.Component {
                                         and securing/authorizing the APIs using <strong>JWT</strong> tokens</li>
                                 </div>
                                 <div>
-                                    <li className="list-items">Developed <b><u>Search Engine + Filter section</u></b> using <strong>node, mongo and Angular </strong>
+                                    <li className="list-items"><b><u>Project : Search Engine + Filter section : </u></b> using <strong>node, mongo and Angular </strong>
                                         capable of searching partial and full text</li>
                                 </div>
-                                <br></br>
-                                <li className="list-items"><strong>Enterprise Single Sign On</strong> : Authenticating Viacom18 users using ldap and passport on node.</li>
-                                <li className="list-items">Developed a generic <strong>pop-up module</strong> using Angular 7</li>
+                                
+                                <li className="list-items"><strong><u>Project : Setting up ELK stack</u></strong> : Deploying elasticsearch , logstash and kibana via docker containers and communicating using ssl and displaying application
+                                 logs attaching docker volumes for better visibility of development logs for developers. Also creating data visualization dashboards for monitoring maximum searched keyword and other user activities</li>
+                                <li className="list-items">Developed a generic <strong>pop-up module</strong> using Angular 7. Used for showing Success, Warning and Error messages</li>
                             </ul>
                         </div>
 
@@ -64,8 +65,10 @@ class WorkExperience extends React.Component {
                             <br></br>
                             <li className="list-items">Designing the database, writing queries and triggers using SQL/PLSQL. Writing <strong>Junit Test cases</strong>.
                             Build using Jenkins and using fortify for detecting security patches</li>
-                            <br></br>
+                            <div>
                             <li className="list-items">Served as <strong>Junior Business Analyst</strong> in Netherlands</li>
+
+                            </div>
                         </ul>
                     </div>
                 </div>

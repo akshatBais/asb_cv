@@ -58,7 +58,7 @@ class MainComponent extends React.Component {
                           Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
                       </div>
                             <div className="download-cv">
-                                <Button variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
+                                <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
                                     <GetAppIcon />
                                     {(this.state.loading) ? 'Downloading...' : ' Download CV'}
                                 </Button>
