@@ -25,6 +25,25 @@
     height: 40px;
 }
 
+/* .form-control-textarea {
+    width: 60%
+} */
+
+.thankyou-message{
+    font-size: xx-large;
+    margin: 50px;
+    padding: 30px;
+}
+
+.another-message {
+    margin: 20px;
+    font-size: large;
+}
+
+.another-button {
+    font-size: x-large;
+    margin: 20px;
+}
 
 input {
     border-radius: 200px;
@@ -64,10 +83,10 @@ textarea {
 }
 
 
-@media all and (max-width : 600px) {
+@media all and (max-width : 500px) {
     .contact-information {
-        margin: 70px;
-        padding: 10px;
+        margin: 50px;
+        padding: 5px;
     }
 
     .form-control {
@@ -84,8 +103,13 @@ textarea {
         ;
     }
 
+    .form-control-textarea {
+        width: 80%
+    }
+
     textarea {
-        width: 80%;
+        width: 90%;
+        min-height: 50px;
     }
 
     .message {

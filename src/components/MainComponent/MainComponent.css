@@ -58,10 +58,10 @@ ul {
     height: 35vh !important;
 }
 
-@media all and (max-width : 600px) {
+@media all and (max-width : 500px) {
     .profile-summary {
         margin-top: 10px;
-        font-size: medium;
+        font-size: small;
         padding: 0 10px 0 10px;
     }
     /* .h3{

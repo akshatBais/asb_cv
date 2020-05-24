@@ -4,6 +4,7 @@ import { Divider, Button } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import CallIcon from '@material-ui/icons/Call';
 import {httpcall} from '../common';
+import CircularProgress from '@material-ui/core/CircularProgress';  
 
 const styles = theme => ({
     margin : {
@@ -20,7 +21,8 @@ class ContactComponent extends React.Component {
             name: "",
             contactNumber: 0,
             message : "",
-            isFormDisabled : false
+            isFormDisabled : false,
+            isButtonDisabled : false
         };
         
         this.haandleFormSubmit = this.haandleFormSubmit.bind(this);
@@ -30,11 +32,14 @@ class ContactComponent extends React.Component {
     }
 
     sendAnotherMessage() {
-        this.setState({ isFormDisabled : false     })
+        this.setState({ isFormDisabled : false , isButtonDisabled : false    })
     }
     // event: React.FormEvent<HTMLFormElement>
     haandleFormSubmit() {
+        this.setState({ isButtonDisabled : true})
         // event.preventDefault();https://akshat-profile-node.herokuapp.com
+        // https://akshat-profile-node.herokuapp.com/data/addClient
+        // http://localhost:5000/data/addClient
         httpcall("post", "https://akshat-profile-node.herokuapp.com/data/addClient", this.state , "SUCESS").then(() => {
             // console.log("saved");
             this.setState({
@@ -94,17 +99,23 @@ class ContactComponent extends React.Component {
                         <div className="form-control-textarea">
                             <textarea  placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
                         </div>
-                        <Button disabled={this.state.name == "" ? true : false}  variant="outlined" color="primary"  className={classes.margin}  onClick={this.haandleFormSubmit}>
-                            Send To Akshat
-                        </Button>
+                        <div hidden = {this.state.isButtonDisabled}>
+                            <Button  disabled={this.state.name == "" ? true : false}  variant="outlined" color="primary"  className={classes.margin}  onClick={this.haandleFormSubmit}>
+                                Send To Akshat
+                            </Button>
+                        </div>
+                       
+                        <div  hidden= {!this.state.isButtonDisabled}>
+                            <CircularProgress/>
+                        </div>
                         {/* <button className = "send-data">Send Data</button> */}
                     </form>
                     <div className="thankyou-message" hidden = {!this.state.isFormDisabled}>
-                        Thankyou For your reaching me !
-                        <div>
+                        Thankyou For reaching me !
+                        <div className="another-message">
                             To drop another message please click below.
-                            <div>
-                            <Button size="small" variant="outlined" color="primary" onClick={this.sendAnotherMessage}>Drop Another Message</Button>
+                            <div className="another-button">
+                            <Button  size="small" variant="outlined" color="primary" onClick={this.sendAnotherMessage}>Drop Another Message</Button>
                             </div>
                         </div>
                     </div>
