@@ -11,9 +11,16 @@ ul {
 }
 
 li {
+    transition: transform .2s; /* Animation */
     display: inline;
     margin: 15px;
 }
+
+.skill-img:hover {
+    -ms-transform: scale(2.0); /* IE 9 */
+    -webkit-transform: scale(2.0); /* Safari 3-8 */
+    transform: scale(2.0); 
+  }
 
 .skill-img {
     height: 40px;
