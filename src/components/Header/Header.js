@@ -85,7 +85,6 @@ function Header() {
       <div className={classes.sectionDesktop} >
         <Toolbar classes={{ root: classes.toolBarProps }}>
           <ul id="navigation-menu">
-            {/* <Sv component={HomeOutlinedIcon} /> */}
             <li><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
             <li><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Work Experience</span></a></li>
             {/* <li><a href="#projects"> Projects</a></li> */}
