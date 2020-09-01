@@ -16,7 +16,8 @@ function Header() {
   const useStyles = makeStyles((theme) =>
     createStyles({
       root: {
-        background: '#181818',
+        // #181818
+        background: '#24292E',
         boxShadow: 'none',
         [theme.breakpoints.down('sm')]: {
           height: '5vh',

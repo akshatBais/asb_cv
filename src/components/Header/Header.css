@@ -24,8 +24,13 @@
     height: 100%;
     margin: 5px;
 }
+a {text-decoration: none;} 
 
 .nav-links {
+    /* fff */
+    /* BDBDBD */
     color : #BDBDBD;
     font-weight: bold;
 }
+
+.nav-links:hover { color: #fff; }
