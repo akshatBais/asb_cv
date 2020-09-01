@@ -5,6 +5,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { IconButton, Typography, Drawer, ListItem, List, Divider } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import CodeRoundedIcon from '@material-ui/icons/CodeRounded';
+import BuildOutlinedIcon from '@material-ui/icons/BuildOutlined';
+import CallOutlinedIcon from '@material-ui/icons/CallOutlined';
 
 function Header() {
   const drawerWidth = 240;
@@ -12,19 +16,18 @@ function Header() {
   const useStyles = makeStyles((theme) =>
     createStyles({
       root: {
-        background: 'white',
+        background: '#181818',
         boxShadow: 'none',
         [theme.breakpoints.down('sm')]: {
           height: '5vh',
         },
       },
       toolBarProps: {
-        minHeight: '50px',
-        justifyContent: 'center'
+        minHeight: '50px'
       },
       sectionDesktop: {
         display: 'none',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         [theme.breakpoints.up('sm')]: {
           display: 'flex',
         }
@@ -39,9 +42,16 @@ function Header() {
           display: 'none',
         }
       },
+      homeIcon : {
+        color: "#88F9FC",
+        margin : "0 10px",
+        transform : "scale(1.1)",
+        fontSize : "medium",
+        // viewBox: "0 0 20 20"
+      },
       menuButtonProps: {
         // minHeight: '50px',
-        color: 'blue'
+        // color: 'blue'
       },
       drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -75,11 +85,12 @@ function Header() {
       <div className={classes.sectionDesktop} >
         <Toolbar classes={{ root: classes.toolBarProps }}>
           <ul id="navigation-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#experience"> Work Experience</a></li>
+            {/* <Sv component={HomeOutlinedIcon} /> */}
+            <li><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
+            <li><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Work Experience</span></a></li>
             {/* <li><a href="#projects"> Projects</a></li> */}
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact"> Contact</a></li>
+            <li><a href="#skills"><BuildOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
+            <li><a href="#contact"><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Contact</span></a></li>
           </ul>
         </Toolbar>
       </div>
@@ -88,9 +99,6 @@ function Header() {
           <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen}>
             <MenuIcon classes={{root: classes.menuButtonProps}}/>
           </IconButton>
-          {/* <Typography>
-              Please help yourself through drawer to navigate
-          </Typography> */}
         </Toolbar>
       </div>
       <Drawer variant="temporary" anchor='left' open={open} className={classes.drawer} classes={{

@@ -1,6 +1,10 @@
-#navigation-menu li {
-    display: inline;
-    margin: 15px;
+.navigation-menu {
+    /* display: inline-block; */
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    /* margin: 15px; */
 }
 
 .menu-column-1 {
@@ -19,4 +23,9 @@
 .drawer-items {
     height: 100%;
     margin: 5px;
+}
+
+.nav-links {
+    color : #BDBDBD;
+    font-weight: bold;
 }
