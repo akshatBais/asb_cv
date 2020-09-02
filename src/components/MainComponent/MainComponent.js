@@ -53,7 +53,7 @@ class MainComponent extends React.Component {
                             <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
                             <h3 className="body">Hey !!<br></br> This is Akshat Singh Bais</h3>
                             <h4 className="body"> &#60; Full Stack Engineer /></h4>
-                            <div className="body">Technology Enthusiast.
+                            <div className="body">Technology Enthusiast....
                           Demonstrated hand-on with several technologies both on front-end and back-end side. Love coding, developing logics and algorithms.
                           Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
                       </div>
