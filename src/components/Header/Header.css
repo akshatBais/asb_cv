@@ -29,8 +29,9 @@ a {text-decoration: none;}
 .nav-links {
     /* fff */
     /* BDBDBD */
-    color : #BDBDBD;
+    color : rgb(236, 225, 225);
     font-weight: bold;
 }
+/* fff */
+.nav-links:hover { color: rgb(144, 129, 129); }
 
-.nav-links:hover { color: #fff; }

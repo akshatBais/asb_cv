@@ -24,13 +24,14 @@ function Header() {
         },
       },
       toolBarProps: {
-        minHeight: '50px'
+        minHeight: '50px',
+        justifyContent : "space-between"
       },
       sectionDesktop: {
         display: 'none',
         justifyContent: 'flex-end',
         [theme.breakpoints.up('sm')]: {
-          display: 'flex',
+          display: 'inline-block',
         }
       },
       sectionMobile: {
@@ -48,11 +49,15 @@ function Header() {
         margin : "0 10px",
         transform : "scale(1.1)",
         fontSize : "medium",
-        // viewBox: "0 0 20 20"
+        '&:hover': {
+          transform : "scale(1.6)"
+        }
+      },
+      headerIcon : {
       },
       menuButtonProps: {
-        // minHeight: '50px',
-        // color: 'blue'
+        color: '#D1D1D1'
+        
       },
       drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -84,11 +89,14 @@ function Header() {
     // <div>
     <AppBar position="sticky" classes={{ root: classes.root }}>
       <div className={classes.sectionDesktop} >
+
         <Toolbar classes={{ root: classes.toolBarProps }}>
+        <div className={classes.headerIcon}>
+          TO BE ON LEFT
+        </div>
           <ul id="navigation-menu">
             <li><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
             <li><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Work Experience</span></a></li>
-            {/* <li><a href="#projects"> Projects</a></li> */}
             <li><a href="#skills"><BuildOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
             <li><a href="#contact"><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Contact</span></a></li>
           </ul>
