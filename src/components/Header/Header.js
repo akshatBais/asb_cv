@@ -5,6 +5,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { IconButton, Typography, Drawer, ListItem, List, Divider } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import CodeRoundedIcon from '@material-ui/icons/CodeRounded';
+import BuildOutlinedIcon from '@material-ui/icons/BuildOutlined';
+import CallOutlinedIcon from '@material-ui/icons/CallOutlined';
 
 function Header() {
   const drawerWidth = 240;
@@ -12,7 +16,8 @@ function Header() {
   const useStyles = makeStyles((theme) =>
     createStyles({
       root: {
-        background: 'white',
+        // #181818
+        background: '#24292E',
         boxShadow: 'none',
         [theme.breakpoints.down('sm')]: {
           height: '5vh',
@@ -20,13 +25,13 @@ function Header() {
       },
       toolBarProps: {
         minHeight: '50px',
-        justifyContent: 'center'
+        justifyContent : "space-between"
       },
       sectionDesktop: {
         display: 'none',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         [theme.breakpoints.up('sm')]: {
-          display: 'flex',
+          display: 'inline-block',
         }
       },
       sectionMobile: {
@@ -39,9 +44,20 @@ function Header() {
           display: 'none',
         }
       },
+      homeIcon : {
+        color: "#88F9FC",
+        margin : "0 10px",
+        transform : "scale(1.1)",
+        fontSize : "medium",
+        '&:hover': {
+          transform : "scale(1.6)"
+        }
+      },
+      headerIcon : {
+      },
       menuButtonProps: {
-        // minHeight: '50px',
-        color: 'blue'
+        color: '#D1D1D1'
+        
       },
       drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -73,13 +89,16 @@ function Header() {
     // <div>
     <AppBar position="sticky" classes={{ root: classes.root }}>
       <div className={classes.sectionDesktop} >
+
         <Toolbar classes={{ root: classes.toolBarProps }}>
+        <div className={classes.headerIcon}>
+          TO BE ON LEFT
+        </div>
           <ul id="navigation-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#experience"> Work Experience</a></li>
-            {/* <li><a href="#projects"> Projects</a></li> */}
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact"> Contact</a></li>
+            <li><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
+            <li><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Work Experience</span></a></li>
+            <li><a href="#skills"><BuildOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
+            <li><a href="#contact"><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Contact</span></a></li>
           </ul>
         </Toolbar>
       </div>
@@ -88,9 +107,6 @@ function Header() {
           <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen}>
             <MenuIcon classes={{root: classes.menuButtonProps}}/>
           </IconButton>
-          {/* <Typography>
-              Please help yourself through drawer to navigate
-          </Typography> */}
         </Toolbar>
       </div>
       <Drawer variant="temporary" anchor='left' open={open} className={classes.drawer} classes={{
