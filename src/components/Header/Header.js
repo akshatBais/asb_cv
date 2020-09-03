@@ -9,6 +9,9 @@ import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import CodeRoundedIcon from '@material-ui/icons/CodeRounded';
 import BuildOutlinedIcon from '@material-ui/icons/BuildOutlined';
 import CallOutlinedIcon from '@material-ui/icons/CallOutlined';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import SendIcon from '@material-ui/icons/Send';
 
 function Header() {
   const drawerWidth = 240;
@@ -21,7 +24,7 @@ function Header() {
         boxShadow: 'none',
         [theme.breakpoints.down('sm')]: {
           height: '5vh',
-        },
+        }
       },
       toolBarProps: {
         minHeight: '50px',
@@ -48,9 +51,9 @@ function Header() {
         color: "#88F9FC",
         margin : "0 10px",
         transform : "scale(1.1)",
-        fontSize : "medium",
+        fontSize : "large",
         '&:hover': {
-          transform : "scale(1.6)"
+          transform : "scale(2.2)"
         }
       },
       headerIcon : {
@@ -66,10 +69,13 @@ function Header() {
         }
       },
       drawerPaper: {
+        background: '#24292E',
+
         width: drawerWidth
       },
       dwarerItems: {
-        marginTop: '50px'
+        padding : "10px",
+        marginTop: '30px'
       }
     })
   );
@@ -92,13 +98,16 @@ function Header() {
 
         <Toolbar classes={{ root: classes.toolBarProps }}>
         <div className={classes.headerIcon}>
-          TO BE ON LEFT
+          <SendIcon classes={{root : classes.homeIcon }}/>Drop me a Message
+          {/* TO BE ON LEFT */}
         </div>
           <ul id="navigation-menu">
-            <li><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
-            <li><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Work Experience</span></a></li>
-            <li><a href="#skills"><BuildOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
-            <li><a href="#contact"><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Contact</span></a></li>
+            <li className="option"><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
+            <li className="option"><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Work Experience</span></a></li>
+            <li className="option"><a href="#skills"><BuildOutlinedIcon viewBox="0 0 25 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
+            <li className="option"><a href="https://github.com/akshatBais" target="_blank"><GitHubIcon viewBox="0 0 25 22" classes={{root : classes.homeIcon }} /><span className = "nav-links">GitHub</span></a></li>
+            <li className="option"><a href="#contact"><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Contact</span></a></li>
+            <li className="option"><a href="https://in.linkedin.com/in/akshat-bais-588976157" target="_blank"><LinkedInIcon viewBox="0 -1 20 22" classes={{root: classes.homeIcon}} /><span className = "nav-links">LinkedIn</span></a></li>
           </ul>
         </Toolbar>
       </div>
@@ -113,19 +122,49 @@ function Header() {
         paper: classes.drawerPaper,
       }} ModalProps={{ onBackdropClick: handleDrawerClose }}>
         <div className="drawer-items">
-          <div>
-            {/* <img src */}So you are on mobile ? tab ? <br></br>
-            Try the pc version as well.
+          <div className="sidebar-picture-container">
+            <img className="sidebar-picture" src={require("../../images/asb.jpg")} alt="" />
           </div>
           <div className={classes.dwarerItems}>
             <Divider />
-            <List><a href="#" onClick={handleDrawerClose}>Home</a></List>
+            <List>
+              <a href="#" onClick={handleDrawerClose}><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
+                <span className = "nav-sidebar-links">Home</span>
+              </a>
+            </List>
             <Divider />
-            <List><a href="#experience" onClick={handleDrawerClose}> Work Experience</a></List>
+            <List>
+              <a href="#experience" onClick={handleDrawerClose}><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
+              <span className = "nav-sidebar-links">Work Exp.</span>
+
+              </a>
+            </List>
             <Divider />
-            <List><a href="#skills" onClick={handleDrawerClose}>Skills</a></List>
+            <List>
+              <a href="#skills" onClick={handleDrawerClose}><BuildOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
+              <span className = "nav-sidebar-links">Skills</span>
+
+              </a>
+            </List>
             <Divider />
-            <List><a href="#contact" onClick={handleDrawerClose}>Contact</a></List>
+            <List>
+              <a href="https://github.com/akshatBais" target="_blank" onClick={handleDrawerClose}><GitHubIcon viewBox="0 0 25 22" classes={{root : classes.homeIcon }} />
+              <span className = "nav-sidebar-links">GitHub</span>
+
+              </a>
+            </List>
+            <List>
+              <a href="https://in.linkedin.com/in/akshat-bais-588976157" target="_blank" onClick={handleDrawerClose}><LinkedInIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
+              <span className = "nav-sidebar-links">LinkedIn</span>
+
+              </a>
+            </List>
+            <List>
+              <a href="#contact" onClick={handleDrawerClose}><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
+              <span className = "nav-sidebar-links">Contact</span>
+
+              </a>
+            </List>
             
           </div>
         </div>

@@ -31,9 +31,6 @@ class MainComponent extends React.Component {
             this.setState({ loading: false });
             const blob = new Blob([res.data], { type: "application/pdf" })
             download(blob, 'akshat_bais_cv.pdf');
-            // const fileURL = URL.createObjectURL(blob);
-            //Open the URL on new Window
-            // window.open(fileURL);
         }).catch(err => {
             this.setState({ loading: false });
             console.log("Error Occurred while downloafing")
@@ -50,6 +47,7 @@ class MainComponent extends React.Component {
 
                     <div className="main-component">
                         <div className="profile-summary">
+                            <div className="background-img"></div>
                             <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
                             <h3 className="body">Hey !!<br></br> This is Akshat Singh Bais</h3>
                             <h4 className="body"> &#60; Full Stack Engineer /></h4>
