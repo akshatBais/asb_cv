@@ -47,10 +47,21 @@ class MainComponent extends React.Component {
 
                     <div className="main-component">
                         <div className="profile-summary">
-                            <div className="background-img"></div>
-                            <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
-                            <h3 className="body">Hey !!<br></br> This is Akshat Singh Bais</h3>
-                            <h4 className="body"> &#60; Full Stack Engineer /></h4>
+                            <div className="profile-picture-name-designation-section">
+                                <div className="profile-picture-section">
+                                    <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
+                                </div>
+                                <div className="profile-name-designation-section">
+                                    <div className="profile-name-section">
+                                        AKSHAT SINGH BAIS
+                                    </div>
+                                    <div className="profile-designation-section">
+                                        <span>Full Stack Developer</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
                             <div className="body">Technology Enthusiast....
                           Demonstrated hand-on with several technologies both on front-end and back-end side. Love coding, developing logics and algorithms.
                           Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
