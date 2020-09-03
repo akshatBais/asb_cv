@@ -35,7 +35,7 @@ a:hover { transform : scale(1.9)}
     font-size: small;
 }
 /* fff */
-.nav-links:hover { color: rgb(144, 129, 129); transform: scale(1.9);}
+.nav-links:hover { color: rgb(144, 129, 129); }
 
 .sidebar-picture {
     margin-top: 20px;

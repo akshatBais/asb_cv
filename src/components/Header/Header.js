@@ -12,6 +12,8 @@ import CallOutlinedIcon from '@material-ui/icons/CallOutlined';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SendIcon from '@material-ui/icons/Send';
+import { Button } from '@material-ui/core';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 function Header() {
   const drawerWidth = 240;
@@ -56,6 +58,12 @@ function Header() {
           transform : "scale(2.2)"
         }
       },
+      sendMessageButton : {
+        border : "1px solid",
+        '&:hover': {
+          color : "#88F9FC"
+        }
+      },
       headerIcon : {
       },
       menuButtonProps: {
@@ -98,7 +106,10 @@ function Header() {
 
         <Toolbar classes={{ root: classes.toolBarProps }}>
         <div className={classes.headerIcon}>
-          <SendIcon classes={{root : classes.homeIcon }}/>Drop me a Message
+          <Button classes={{ root: classes.sendMessageButton }} size="small">
+            <SendIcon classes={{root : classes.homeIcon }}/>
+               <span  className = "nav-links">Drop me a Message</span>
+            </Button>
           {/* TO BE ON LEFT */}
         </div>
           <ul id="navigation-menu">
