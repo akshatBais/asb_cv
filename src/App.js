@@ -26,14 +26,15 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-  },
+    width: "50%"
+  }
 }));
 function App() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleModalOpen = () => {
-    console.log("clicked")
+    // console.log("clicked")
     setOpen(!open);
   }
 
@@ -41,22 +42,28 @@ function App() {
   return (
     <div className="profile">
         <Header handleModalOpen={handleModalOpen} />
-        <div className="profile-body">
-        <MainComponent />
-        <Modal open={open} className={classes.modal}>
+        <Modal open={open} className={classes.modal} BackdropComponent={Backdrop} BackdropProps={{ timeout: 150,}} onClose={handleModalOpen}>
           <Fade in={open}>
+
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">react-transition-group animates me.</p>
+            <ContactComponent />
+
+            {/* <h2 id="transition-modal-title">Transition modal</h2> */}
+            {/* <p id="transition-modal-description">react-transition-group animates me.</p> */}
           </div>
         </Fade>
-      </Modal>
-        <Divider />
-        <WorkExperience />
-        <Divider />
-        <SkillsComponent />
-        <Divider />
-        <ContactComponent />
+        </Modal>
+        
+        <div className="profile-body">
+          <MainComponent />
+          <Divider />
+          <WorkExperience />
+          <Divider />
+          <SkillsComponent />
+          <Divider />
+          <div className="contact-component">
+            <ContactComponent />
+          </div>
         </div>
      
       <Footer />

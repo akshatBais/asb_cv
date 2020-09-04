@@ -13,9 +13,19 @@
   background-color: #151A1D;
 }
 
+.contact-component {
+  display: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media all and (min-width : 600px) {
+  .contact-component {
+    display: none;
   }
 }
 

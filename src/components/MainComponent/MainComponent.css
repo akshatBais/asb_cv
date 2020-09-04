@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     background-color: #151A1D;
-
+    height:80vh;
 }
 
 .column1{
@@ -130,19 +130,33 @@ ul {
     }
 }
 
-@media all and (max-width : 1400px) {
+@media all and (max-width : 1600px) {
     .profile-picture{
         /* display: none; */
-        height: 20vh !important;
+        height: 30vh !important;
         border-radius: 2000px;   
         margin-bottom: 5px;
     }
     .profile-name-section {
-        margin-top: 100px;
+        margin-top: 60px;
         flex-grow: 2;
-        height: 30%;
+        height: 50%;
         color: beige;
-        font-size: 50px;
+        font-size: 75px;
+    }
+
+    .profile-designation-section {
+        flex-grow: 2;
+        height: 13%;
+        color: white;
+        font-size: 30px;
+    }
+
+    .profile-brief-section {
+        /* margin-top: 10px; */
+        width: 65%;;
+        color: #58585f;
+        font-size: x-large;
     }
 }
 
@@ -151,12 +165,13 @@ ul {
         margin-top: 5px;
     }
     .profile-name-section {
-        height: 35%;
+        height: 50%;
         margin-top: 30px
     }
     .profile-designation-section {
         margin: 15px 0;
         font-size: 25px;
+        height: 12%;
     }
     .profile-brief-section {
         /* margin-top: 15px; */

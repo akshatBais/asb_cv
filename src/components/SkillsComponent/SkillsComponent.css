@@ -1,9 +1,24 @@
 .skills-component {
-    min-height: 90vh;
-    padding : 10px;
-    justify-content: center;
-    align-items: center;
     display: flex;
+    justify-content: center;
+}
+
+.skills-summary {
+    height: 90vh;
+    width: 75%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+}
+
+.non-programming-skills {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.programming-skills {
+    flex-grow: 1
 }
 
 ul {

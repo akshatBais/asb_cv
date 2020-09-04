@@ -75,8 +75,8 @@ class ContactComponent extends React.Component {
         const {classes} = this.props;
         return (
 
-            <section className="contact" id="contact">
-                <Divider />
+            // <section className="contact" id="contact">
+                // <Divider />
                 <div className="contact-information">
                     <div className="message">
                         <p><i>If you like my profile and think my skills can be leveraged for your project and requirements.
@@ -84,7 +84,7 @@ class ContactComponent extends React.Component {
                     </div>
                     <div className="message">
                         <p>PS : You can still leave a message along with your details if you want to get in touch
-                             regarding your personal projects or any sort of help. Happy development guys !
+                             regarding your personal projects or any sort of help.
                     </p>
                     </div>
                     {/* onSubmit={this.haandleFormSubmit} */}
@@ -120,7 +120,7 @@ class ContactComponent extends React.Component {
                         </div>
                     </div>
                 </div>
-            </section>
+            // </section>
 
         )
 

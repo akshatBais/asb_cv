@@ -1,12 +1,12 @@
 .contact {
     display: flex;
     min-height: 100vh;
-
+    justify-content: center;
 }
 
 .contact-information {
-    margin: 100px;
-    padding: 50px;
+    /* margin: 100px; */
+    /* padding: 50px; */
     width: 100%;
     text-align: center;
 }

@@ -2,7 +2,14 @@ import React from 'react';
 import '../SkillsComponent/SkillsComponent.css';
 // import node from '../../images/nodejs.png';
 import imagesLoader from './skillsImages';
+import SpeedIcon from '@material-ui/icons/Speed';
+import GroupIcon from '@material-ui/icons/Group';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+import SettingsInputComponentIcon from '@material-ui/icons/SettingsInputComponent';
+
 const baseUrl = "./skills-images/";
+
+
 // skillItems;
 // function imagePathBuilder() {
 //     var skillItems : [];
@@ -30,27 +37,28 @@ class SkillsComponent extends React.Component {
         return (
             <div id="skills" className="skills-component">
                 <div className="skills-summary">
-                    {/* <br></br> */}
-                    <h2>Primary Skills</h2>
-                    <ul>
-                        <li>
-                        {/* {imagePathBuilder()} */}
-                            {/* <div style={{width:"image width px",fontSize:"80%" , textAlign:"center"}}> */}
-                            <img className="skill-img" src={require(baseUrl + "angular.svg")} />
-                            {/* angular */}
-                            {/* </div> */}
-                        </li>
-                        <li><img className="skill-img" src={require(baseUrl + "nodejs.png")} /></li>
-                        <li><img className="skill-img" src={require(baseUrl + "java.jpg")} /></li>
-                        <li><img className="skill-img" src={require(baseUrl + "js.svg")} /></li>
-                        <li><img className="skill-img" src={require(baseUrl + "docker.png")} /></li>
-                    </ul>
-                    <h2>Secondary Skills</h2>
-                    <ul>
-                        <li><img className="skill-img" src={require(baseUrl + "elk.png")} /></li>
-                        <li><img className="skill-img" src={require(baseUrl + "react.png")} /></li>
-                        <li>C++</li>
-                    </ul>
+                        <div className="non-programming-skills">
+                            <div><SettingsInputComponentIcon color="secondary"/></div>
+                            <div><AssessmentIcon color="primary"/></div>
+                            <div><GroupIcon /></div>
+                            <div><SpeedIcon style={{ color: "green[500]" }}/></div>
+                        </div>
+                        <div className="programming-skills">
+                            <div className="skills-title">Primary Skills</div>
+                                <ul>
+                                    <li><img className="skill-img" src={require(baseUrl + "angular.svg")} /></li>
+                                    <li><img className="skill-img" src={require(baseUrl + "nodejs.png")} /></li>
+                                    <li><img className="skill-img" src={require(baseUrl + "java.jpg")} /></li>
+                                    <li><img className="skill-img" src={require(baseUrl + "js.svg")} /></li>
+                                    <li><img className="skill-img" src={require(baseUrl + "docker.png")} /></li>
+                                </ul>
+                            <div className="skills-title">Secondary Skills</div>
+                            <ul>
+                                <li><img className="skill-img" src={require(baseUrl + "elk.png")} /></li>
+                                <li><img className="skill-img" src={require(baseUrl + "react.png")} /></li>
+                                <li>C++</li>
+                            </ul>
+                        </div>
                 </div>
             </div>
         )
