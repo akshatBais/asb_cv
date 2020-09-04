@@ -58,6 +58,7 @@ ul {
     flex-direction: row;
 }
 .profile-picture-section {
+    margin: 0 50px;
     flex-grow: 1;
     flex-shrink: 3;
 }
@@ -68,18 +69,35 @@ ul {
     position: relative;
 }
 .profile-name-section {
-    flex-grow: 0;
-    height: 60%;
+    margin-top: 100px;
+    flex-grow: 2;
+    height: 25%;
     color: beige;
-    font-size: 50px;
+    font-size: 80px;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
 }
 
 .profile-designation-section {
-    height: 35%;
+    flex-grow: 2;
+    height: 15%;
     color: white;
+    font-size: 30px;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
 }
+
+.profile-brief-section {
+    width: 60%;;
+    color: #58585f;
+    font-size: x-large;
+}
+
+
 .profile-picture {
-    margin-top: 110px;
+    margin-top: 90px;
     border-radius: 5000px;
     height: 30vh !important;
     border: 1px solid aqua;

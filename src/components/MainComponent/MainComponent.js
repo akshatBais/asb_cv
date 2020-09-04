@@ -15,6 +15,9 @@ class MainComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            name: 'AKSHAT SINGH BAIS',
+            designation : 'Full Stack Developer',
+            brief : 'Passionate about technology and building applications that help people experience everyday life more easier',
             loading: false
         }
         this.downloadCv = this.downloadCv.bind(this);
@@ -53,25 +56,28 @@ class MainComponent extends React.Component {
                                 </div>
                                 <div className="profile-name-designation-section">
                                     <div className="profile-name-section">
-                                        AKSHAT SINGH BAIS
+                                        {this.state.name}
                                     </div>
                                     <div className="profile-designation-section">
-                                        <span>Full Stack Developer</span>
+                                            {this.state.designation}
+                                    </div>
+                                    <div className="profile-brief-section">
+                                        {this.state.brief}
                                     </div>
                                 </div>
                                 
                             </div>
                             
-                            <div className="body">Technology Enthusiast....
+                            {/* <div className="body">Technology Enthusiast....
                           Demonstrated hand-on with several technologies both on front-end and back-end side. Love coding, developing logics and algorithms.
                           Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
-                      </div>
-                            <div className="download-cv">
+                      </div> */}
+                            {/* <div className="download-cv">
                                 <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
                                     <GetAppIcon />
                                     {(this.state.loading) ? 'Downloading...' : ' Download CV'}
                                 </Button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
