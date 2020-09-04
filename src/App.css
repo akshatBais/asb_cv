@@ -2,16 +2,16 @@
   /* background-image: url('/public/background-image.jpg'); */
   width: 100%;
   max-height: 100vh;
-  position: static;
+  /* position: static; */
   /* margin: auto; */
 }
-/* 
+.profile {
+  background-color: rgb(144, 129, 129);
+
+}
 .profile-body {
-  position: absolute;
-  top: 50px;
-  bottom: 0px;
-  overflow-y: scroll;
-} */
+  background-color: #151A1D;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

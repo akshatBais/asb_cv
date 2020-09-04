@@ -3,10 +3,11 @@
     justify-content: center;
     display: inline-block;
     width: 75%;
+
 }
 
 .parent-column{
-    margin: 10px;
+    margin: 2px 10px;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
@@ -38,11 +39,6 @@ ul {
     padding: 0px;
     margin: 0px;
 }
-
-
-/* img {
-    height: 40px;
-} */
 
 .profile-summary {
     flex-wrap: nowrap;
@@ -79,12 +75,8 @@ ul {
     flex-wrap: wrap;
     display: flex;
 }
-.profile-name-first, .profile-name-middle, .profile-name-last{ flex-grow: 0.1; margin-right: 10px; }
-
-
-.profile-name-first:hover , .profile-name-middle:hover , .profile-name-last:hover {
-    color: rgb(144, 129, 129);
-}
+.profile-name-first,.profile-name-middle, .profile-name-last {flex-grow: 0.1; margin-right: 10px; }
+.profile-name-first:hover , .profile-name-middle:hover , .profile-name-last:hover { color: rgb(144, 129, 129); }
 
 .profile-designation-section {
     flex-grow: 2;
@@ -117,9 +109,7 @@ ul {
         padding: 0 10px 0 10px;
 
     }
-    /* .h3{
-        font-size: small;
-    } */
+
     .profile-picture-section {
         margin: 0px;
         flex-grow: 1;
@@ -140,7 +130,7 @@ ul {
     }
 }
 
-@media all and (max-width : 1300px) {
+@media all and (max-width : 1400px) {
     .profile-picture{
         /* display: none; */
         height: 20vh !important;
@@ -150,17 +140,18 @@ ul {
     .profile-name-section {
         margin-top: 100px;
         flex-grow: 2;
-        height: 35%;
+        height: 30%;
         color: beige;
         font-size: 50px;
     }
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 680px) {
     .profile-picture-name-designation-section {
         margin-top: 5px;
     }
     .profile-name-section {
+        height: 35%;
         margin-top: 30px
     }
     .profile-designation-section {

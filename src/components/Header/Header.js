@@ -15,7 +15,9 @@ import SendIcon from '@material-ui/icons/Send';
 import { Button } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
 
-function Header() {
+
+function Header(props) {
+  
   const drawerWidth = 240;
   const [open, setOpen] = React.useState(false);
   const useStyles = makeStyles((theme) =>
@@ -92,12 +94,12 @@ function Header() {
   const handleDrawerOpen = () => {
     setOpen(!open);
   }
-
   const handleDrawerClose = () => {
     setOpen(false);
   }
+  
 
-
+ 
 
   return (
     // <div>
@@ -106,7 +108,7 @@ function Header() {
 
         <Toolbar classes={{ root: classes.toolBarProps }}>
           <div className={classes.headerIcon}>
-            <Button classes={{ root: classes.sendMessageButton }} size="small">
+            <Button classes={{ root: classes.sendMessageButton }} size="small" onClick={props.handleModalOpen}>
               <SendIcon classes={{root : classes.homeIcon }}/>
                 <span  className = "nav-links">Drop me a Message</span>
             </Button>
@@ -121,6 +123,7 @@ function Header() {
           </ul>
         </Toolbar>
       </div>
+    
       <div className={classes.sectionMobile}>
         <Toolbar>
           <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen}>
@@ -180,6 +183,7 @@ function Header() {
         </div>
       </Drawer>
 
+     
     </AppBar >
 
 
