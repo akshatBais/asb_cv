@@ -4,18 +4,17 @@ import { Button } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import axios from 'axios';
 import download from 'downloadjs';
-// const baseUrl = "./skills-images/";
-
-// interface MainInterface {
-//     loading: boolean
-// }
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from "@material-ui/core/styles";
 
 class MainComponent extends React.Component {
-
+    
     constructor(props) {
         super(props);
         this.state = {
-            name: 'AKSHAT SINGH BAIS',
+            name: 'AKSHAT',
+            middleName: 'SINGH',
+            lastName: 'BAIS',
             designation : 'Full Stack Developer',
             brief : 'Passionate about technology and building applications that help people experience everyday life more easier',
             loading: false
@@ -48,15 +47,20 @@ class MainComponent extends React.Component {
             <section id="#">
                 <div className="parent-column">
 
+                    
+
                     <div className="main-component">
                         <div className="profile-summary">
+                          
                             <div className="profile-picture-name-designation-section">
                                 <div className="profile-picture-section">
                                     <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
                                 </div>
                                 <div className="profile-name-designation-section">
                                     <div className="profile-name-section">
-                                        {this.state.name}
+                                        <div className="profile-name-first">{this.state.name}</div>
+                                        <div className="profile-name-middle">{this.state.middleName}</div>
+                                        <div className="profile-name-last">{this.state.lastName}</div>
                                     </div>
                                     <div className="profile-designation-section">
                                             {this.state.designation}
