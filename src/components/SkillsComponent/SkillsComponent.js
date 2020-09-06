@@ -13,12 +13,12 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 const baseUrl = "./skills-images/";
-const styles = {
-
-  circularProgress : {
-      size : "400"
-  }
-};
+const imageMap = {
+    60 : 'react.png',
+    70: 'mongo.png',
+    68:'mysql.png',
+    62:'firebase.png'
+}
 function CircularProgressWithLabel(props) {
     return (
       <Box position="relative" display="inline-flex">
@@ -33,9 +33,14 @@ function CircularProgressWithLabel(props) {
           alignItems="center"
           justifyContent="center"
         >
-          <Typography variant="caption" component="div" color="white">{`${Math.round(
-            props.value,
-          )}%`}</Typography>
+            <div>
+            <img className="skill-img" src={require(`./skills-images/${imageMap[props.value]}`)} />
+            </div>
+            <div>
+            
+            </div>
+            <br></br>
+         
         </Box>
       </Box>
     );
@@ -61,7 +66,7 @@ class SkillsComponent extends React.Component {
     }
 
     render() {
-        const {classes} = this.props;
+        // const {classes} = this.props;
 
         return (
             <div id="skills" className="skills-component">
@@ -75,15 +80,15 @@ class SkillsComponent extends React.Component {
                                                 <img className="skill-img" src={require(baseUrl + "nodejs.png")} />
                                             </div>
                                             <div className="ps-name-progress">
-                                                <LinearProgress variant="static" value={25}  />
+                                                <LinearProgress variant="determinate" value={80}  />
                                             </div>
                                         </li>
                                         <li className="ps-name">
-                                        <div className="ps-name-image">
+                                            <div className="ps-name-image">
                                                 <img className="skill-img" src={require(baseUrl + "java.png")} />
                                             </div>
                                             <div className="ps-name-progress">
-                                                <LinearProgress variant="static" value={25}  />
+                                                <LinearProgress variant="determinate" value={65}  />
                                             </div>
                                         </li>
                                         <li className="ps-name">
@@ -91,7 +96,7 @@ class SkillsComponent extends React.Component {
                                                 <img className="skill-img" src={require(baseUrl + "angular.svg")} />
                                             </div>
                                             <div className="ps-name-progress">
-                                                <LinearProgress variant="static" value={5} />
+                                                <LinearProgress variant="determinate" value={70} />
                                             </div>
                                         </li>
                                         <li className="ps-name">
@@ -99,7 +104,7 @@ class SkillsComponent extends React.Component {
                                                 <img className="skill-img" src={require(baseUrl + "js.svg")} />
                                             </div>
                                             <div className="ps-name-progress">
-                                                <LinearProgress variant="static" value={25} />
+                                                <LinearProgress variant="determinate" value={85} />
                                             </div>
                                         </li>
                                         <li className="ps-name">
@@ -107,7 +112,7 @@ class SkillsComponent extends React.Component {
                                                 <img className="skill-img" src={require(baseUrl + "docker.png")} />
                                             </div>
                                             <div className="ps-name-progress">
-                                                <LinearProgress variant="static" value={25}  />
+                                                <LinearProgress variant="determinate" value={65}  />
                                             </div>
                                         </li>
                                     </ul>
@@ -125,38 +130,31 @@ class SkillsComponent extends React.Component {
                             <div className="skills-title">Other Skills</div>
                             <div className="is-section">
                                 <div class="is-name">
-                                    {/* <h2>React</h2> */}
-                                    <CircularProgressWithLabel  value={60} />
                                     <p>React</p>
+                                    <CircularProgressWithLabel  value={60} />
+                                    <p>60%</p>
                                 </div>
                                 
                                 <div class="is-name">
-                                    {/* <h2>Mongo DB</h2> */}
-                                    <CircularProgressWithLabel value={70} />
                                     <p>Mongo DB</p>
+                                    <CircularProgressWithLabel value={70} />
+                                    <p>70%</p>
 
                                 </div>
                                 
                                 <div class="is-name" >
-                                    {/* <h2>is-name 3</h2> */}
-                                    <CircularProgressWithLabel value={70} />
                                     <p>MySql</p>
+                                    <CircularProgressWithLabel value={68} />
+                                    <p>71%</p>
 
                                 </div>
                                 
                                 <div class="is-name">
-                                    {/* <h2>Firebase DB</h2> */}
-                                    <CircularProgressWithLabel value={40} />
-                                    <p>Application Servers</p>
+                                    <p>GoogleFirebase</p>
+                                    <CircularProgressWithLabel value={62} />
+                                    <p>62%</p>
                                 </div>
                             </div>
-                            {/* <div className="is-section">
-                                <div className="is-name"><CircularProgressWithLabel value={25}/></div>
-                                <div className="is-name"><CircularProgress /></div>
-                                <div className="is-name"><CircularProgress /></div>
-                                <div className="is-name"><CircularProgress /></div>
-                                <div className="is-name"><CircularProgress /></div>
-                            </div> */}
                           </div>
                 </div>
             </div>
@@ -165,8 +163,6 @@ class SkillsComponent extends React.Component {
 
 }
 
-SkillsComponent.prototypes = {
-    classes: PropTypes.object.isRequired
-}
 
-export default withStyles(styles)(SkillsComponent);
+
+export default SkillsComponent;

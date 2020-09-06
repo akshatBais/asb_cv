@@ -91,7 +91,15 @@ p {
 }
 
 .MuiLinearProgress-barColorPrimary {
-    background-color: aqua !important;
+    background-color: antiquewhite !important;
+    color: red !important;
+    height: 10px !important;
+}
+.MuiLinearProgress-colorPrimary {
+    background-color: grey !important;
+}
+.MuiLinearProgress-root {
+    height: 5px !important;
 }
 .ss-list-ul {
     list-style: none;
