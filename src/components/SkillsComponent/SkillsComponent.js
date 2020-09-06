@@ -28,22 +28,26 @@ function CircularProgressWithLabel(props) {
           left={0}
           bottom={0}
           right={0}
-          height = {20}
           position="absolute"
           display="flex"
           alignItems="center"
           justifyContent="center"
-          size="400"
         >
-          <Typography variant="caption" component="div" color="textSecondary">{`${Math.round(
+          <Typography variant="caption" component="div" color="white">{`${Math.round(
             props.value,
           )}%`}</Typography>
         </Box>
       </Box>
     );
   }
-
-
+  
+  CircularProgressWithLabel.propTypes = {
+    /**
+     * The value of the progress indicator for the determinate and static variants.
+     * Value between 0 and 100.
+     */
+    value: PropTypes.number.isRequired,
+  };
 class SkillsComponent extends React.Component {
     componentWillMount() {
     }
@@ -118,19 +122,32 @@ class SkillsComponent extends React.Component {
                        
                         </div>
                         <div className="intermediate-skills">
-                            <div className="skills-title">Intermediate Skills</div>
+                            <div className="skills-title">Other Skills</div>
                             <div className="is-section">
-                                <div className="is-name">
-            1
+                                <div class="is-name">
+                                    {/* <h2>React</h2> */}
+                                    <CircularProgressWithLabel  value={60} />
+                                    <p>React</p>
                                 </div>
-                                <div className="is-name">
-2
+                                
+                                <div class="is-name">
+                                    {/* <h2>Mongo DB</h2> */}
+                                    <CircularProgressWithLabel value={70} />
+                                    <p>Mongo DB</p>
+
                                 </div>
-                                <div className="is-name">
-3
+                                
+                                <div class="is-name" >
+                                    {/* <h2>is-name 3</h2> */}
+                                    <CircularProgressWithLabel value={70} />
+                                    <p>MySql</p>
+
                                 </div>
-                                <div className="is-name">
-4
+                                
+                                <div class="is-name">
+                                    {/* <h2>Firebase DB</h2> */}
+                                    <CircularProgressWithLabel value={40} />
+                                    <p>Application Servers</p>
                                 </div>
                             </div>
                             {/* <div className="is-section">

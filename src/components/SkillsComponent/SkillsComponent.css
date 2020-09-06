@@ -5,7 +5,7 @@
 
 .skills-summary {
     height: 90vh;
-    width: 60%;
+    width: 75%;
     margin-top: 90px;
     display: flex;
     flex-direction: row;
@@ -22,8 +22,8 @@
 .programming-skills {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    flex-grow: 1.2;
+    /* min-width: 100%; */
+    flex-grow: 13;
 }
 
 .intermediate-skills {
@@ -31,14 +31,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* width: 50%; */
+    flex-shrink: 3;
 
 }
 
 .is-section {
-    /* justify-content: center;
-    text-align: center;
-    margin: 20px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
@@ -46,21 +43,35 @@
     justify-content: space-evenly;
     
 }
-
+p {
+    color: white;
+}
 .is-name {
-    min-width: 100px;
-    min-height: 100px;
+    flex: 25%;
+    padding: 20px;
+    margin: 5px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.MuiTypography-caption {
+    color: whitesmoke !important;
 }
 .MuiCircularProgress-colorPrimary {
     height: 90px !important;
     width: 90px !important;
-    color: red !important;
+    color:beige !important;
+}
+.MuiCircularProgress-circle, .MuiCircularProgress-circleStatic {
+    stroke-width: 2.8;
 }
 
 .primary-skills {
     margin-bottom: 30px;
 }
 
+.secondary-skills {
+    margin-bottom: 30px;
+}
 
 
 .ps-name {
