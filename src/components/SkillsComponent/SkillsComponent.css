@@ -5,38 +5,113 @@
 
 .skills-summary {
     height: 90vh;
-    width: 75%;
+    width: 60%;
     margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skills-title {
+    font-size: x-large;
+    color: white;
+    font-weight: solid;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.programming-skills {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-grow: 1.2;
+}
+
+.intermediate-skills {
+    flex-grow: 0.8;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* width: 50%; */
+
+}
+
+.is-section {
+    /* justify-content: center;
+    text-align: center;
+    margin: 20px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    min-height: 50vh;
+    justify-content: space-evenly;
+    
+}
+
+.is-name {
+    min-width: 100px;
+    min-height: 100px;
+}
+.MuiCircularProgress-colorPrimary {
+    height: 90px !important;
+    width: 90px !important;
+    color: red !important;
+}
+
+.primary-skills {
+    margin-bottom: 30px;
+}
+
+
+
+.ps-name {
+    margin: 10px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
 }
 
-.non-programming-skills {
-    display: flex;
-    flex-direction: column;
+.ps-name-image {
+    flex-grow: 0;
+    /* margin-bottom: 10px; */
+}
+.ps-name-progress {
     flex-grow: 1;
+    margin: 15px 30px;
 }
 
-.programming-skills {
-    flex-grow: 1
+.MuiLinearProgress-barColorPrimary {
+    background-color: aqua !important;
 }
-
-ul {
+.ss-list-ul {
     list-style: none;
+    justify-content: center;
+    text-align: center;
 }
-
-li {
-    transition: transform .2s; /* Animation */
+.ss-name {
     display: inline;
-    margin: 15px;
+    margin-right: 30px;
+    text-align: center;
+    justify-content: center;
 }
 
 .skill-img:hover {
     -ms-transform: scale(2.0); /* IE 9 */
     -webkit-transform: scale(2.0); /* Safari 3-8 */
-    transform: scale(2.0); 
+    transform: scale(1.5); 
   }
 
 .skill-img {
     height: 40px;
+}
+
+@media all and  (max-width: 600px){
+    .skill-img:hover {
+        -ms-transform: scale(2.0); /* IE 9 */
+        -webkit-transform: scale(2.0); /* Safari 3-8 */
+        transform: scale(1.5); 
+      }
+    
+    .skill-img {
+        height: 25px;
+    }
 }

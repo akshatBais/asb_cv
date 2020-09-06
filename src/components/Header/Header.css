@@ -6,7 +6,9 @@
 }
 
 .option {
-    margin: 9px;;
+    margin: 9px;
+    transition: transform .2s; /* Animation */
+    display: inline;
 }
 .menu-column-1 {
     display: inline-block;

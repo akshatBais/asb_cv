@@ -1,64 +1,146 @@
 import React from 'react';
 import '../SkillsComponent/SkillsComponent.css';
-// import node from '../../images/nodejs.png';
+import PropTypes from 'prop-types';
 import imagesLoader from './skillsImages';
 import SpeedIcon from '@material-ui/icons/Speed';
 import GroupIcon from '@material-ui/icons/Group';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import SettingsInputComponentIcon from '@material-ui/icons/SettingsInputComponent';
+import { withStyles } from '@material-ui/core/styles';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const baseUrl = "./skills-images/";
+const styles = {
+
+  circularProgress : {
+      size : "400"
+  }
+};
+function CircularProgressWithLabel(props) {
+    return (
+      <Box position="relative" display="inline-flex">
+        <CircularProgress variant="static" {...props} />
+        <Box
+          top={0}
+          left={0}
+          bottom={0}
+          right={0}
+          height = {20}
+          position="absolute"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          size="400"
+        >
+          <Typography variant="caption" component="div" color="textSecondary">{`${Math.round(
+            props.value,
+          )}%`}</Typography>
+        </Box>
+      </Box>
+    );
+  }
 
 
-// skillItems;
-// function imagePathBuilder() {
-//     var skillItems : [];
-//     imagesLoader.forEach((image, index) => {
-//         var imagePath = baseUrl + image;
-//         skillItems.push(<li key={index}><img src={require(imagePath)} /></li>);
-//         // return <li key={index}><img src={imagePath} /></li>;
-//     })
-//     return skillItems;
-// }
 class SkillsComponent extends React.Component {
-
     componentWillMount() {
     }
 
     componentDidMount() {
-        console.log("Did mount");
+        // console.log("Did mount");
     }
 
     componentWillUnmount() {
-        console.log("About to unmount")
+        // console.log("About to unmount")
     }
 
     render() {
+        const {classes} = this.props;
+
         return (
             <div id="skills" className="skills-component">
                 <div className="skills-summary">
-                        <div className="non-programming-skills">
-                            <div><SettingsInputComponentIcon color="secondary"/></div>
-                            <div><AssessmentIcon color="primary"/></div>
-                            <div><GroupIcon /></div>
-                            <div><SpeedIcon style={{ color: "green[500]" }}/></div>
-                        </div>
                         <div className="programming-skills">
-                            <div className="skills-title">Primary Skills</div>
-                                <ul>
-                                    <li><img className="skill-img" src={require(baseUrl + "angular.svg")} /></li>
-                                    <li><img className="skill-img" src={require(baseUrl + "nodejs.png")} /></li>
-                                    <li><img className="skill-img" src={require(baseUrl + "java.jpg")} /></li>
-                                    <li><img className="skill-img" src={require(baseUrl + "js.svg")} /></li>
-                                    <li><img className="skill-img" src={require(baseUrl + "docker.png")} /></li>
+                            <div className="primary-skills">
+                                <div className="skills-title">Primary Skills</div>
+                                    <ul>
+                                        <li className="ps-name">
+                                            <div className="ps-name-image">
+                                                <img className="skill-img" src={require(baseUrl + "nodejs.png")} />
+                                            </div>
+                                            <div className="ps-name-progress">
+                                                <LinearProgress variant="static" value={25}  />
+                                            </div>
+                                        </li>
+                                        <li className="ps-name">
+                                        <div className="ps-name-image">
+                                                <img className="skill-img" src={require(baseUrl + "java.png")} />
+                                            </div>
+                                            <div className="ps-name-progress">
+                                                <LinearProgress variant="static" value={25}  />
+                                            </div>
+                                        </li>
+                                        <li className="ps-name">
+                                        <div className="ps-name-image">
+                                                <img className="skill-img" src={require(baseUrl + "angular.svg")} />
+                                            </div>
+                                            <div className="ps-name-progress">
+                                                <LinearProgress variant="static" value={5} />
+                                            </div>
+                                        </li>
+                                        <li className="ps-name">
+                                        <div className="ps-name-image">
+                                                <img className="skill-img" src={require(baseUrl + "js.svg")} />
+                                            </div>
+                                            <div className="ps-name-progress">
+                                                <LinearProgress variant="static" value={25} />
+                                            </div>
+                                        </li>
+                                        <li className="ps-name">
+                                        <div className="ps-name-image">
+                                                <img className="skill-img" src={require(baseUrl + "docker.png")} />
+                                            </div>
+                                            <div className="ps-name-progress">
+                                                <LinearProgress variant="static" value={25}  />
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div className="secondary-skills">
+                                <div className="skills-title">Secondary Skills</div>
+                                <ul className="ss-list-ul">
+                                    <li className="ss-name"><img className="skill-img" src={require(baseUrl + "elk.png")} /></li>
+                                    <li className="ss-name"><img className="skill-img" src={require(baseUrl + "react.png")} /></li>
                                 </ul>
-                            <div className="skills-title">Secondary Skills</div>
-                            <ul>
-                                <li><img className="skill-img" src={require(baseUrl + "elk.png")} /></li>
-                                <li><img className="skill-img" src={require(baseUrl + "react.png")} /></li>
-                                <li>C++</li>
-                            </ul>
+                            </div>
+                       
                         </div>
+                        <div className="intermediate-skills">
+                            <div className="skills-title">Intermediate Skills</div>
+                            <div className="is-section">
+                                <div className="is-name">
+            1
+                                </div>
+                                <div className="is-name">
+2
+                                </div>
+                                <div className="is-name">
+3
+                                </div>
+                                <div className="is-name">
+4
+                                </div>
+                            </div>
+                            {/* <div className="is-section">
+                                <div className="is-name"><CircularProgressWithLabel value={25}/></div>
+                                <div className="is-name"><CircularProgress /></div>
+                                <div className="is-name"><CircularProgress /></div>
+                                <div className="is-name"><CircularProgress /></div>
+                                <div className="is-name"><CircularProgress /></div>
+                            </div> */}
+                          </div>
                 </div>
             </div>
         )
@@ -66,4 +148,8 @@ class SkillsComponent extends React.Component {
 
 }
 
-export default SkillsComponent;
+SkillsComponent.prototypes = {
+    classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(SkillsComponent);
