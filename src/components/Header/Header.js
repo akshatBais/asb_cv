@@ -113,17 +113,17 @@ function Header(props) {
 
         <Toolbar classes={{ root: classes.toolBarProps }}>
           <div className={classes.headerIcon}>
-          <a className="header-link" href="#experience"><SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} /><span className = "nav-links">Drop me a message</span></a>
+          <a href="#experience"><SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} /><span className = "nav-links">Drop me a message</span></a>
             {/* <Button classes={{ root: classes.sendMessageButton }} size="small" onClick={props.handleModalOpen}>
               <SendIcon classes={{root : classes.homeIcon }}/>
                 <span  className = "nav-links">Drop me a Message</span>
             </Button> */}
           </div>
           <ul id="navigation-menu">
-            <li className="option"><a className="header-link" href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
-            <li className="option"><a className="header-link" href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Projects</span></a></li>
-            <li className="option"><a className="header-link" href="#skills"><BuildOutlinedIcon viewBox="0 0 25 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
-            <li className="option"><a className="header-link" href="https://github.com/akshatBais" target="_blank"><GitHubIcon viewBox="0 0 25 22" classes={{root : classes.homeIcon }} /><span className = "nav-links">GitHub</span></a></li>
+            <li className="option"><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
+            <li className="option"><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Projects</span></a></li>
+            <li className="option"><a href="#skills"><BuildOutlinedIcon viewBox="0 0 25 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
+            <li className="option"><a href="https://github.com/akshatBais" target="_blank"><GitHubIcon viewBox="0 0 25 22" classes={{root : classes.homeIcon }} /><span className = "nav-links">GitHub</span></a></li>
             {/* <li className="option"><a href="#contact"><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Contact</span></a></li> */}
             <li className="option"><a href="https://in.linkedin.com/in/akshat-bais-588976157" target="_blank"><LinkedInIcon viewBox="0 -1 20 22" classes={{root: classes.homeIcon}} /><span className = "nav-links">LinkedIn</span></a></li>
           </ul>
