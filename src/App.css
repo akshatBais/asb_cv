@@ -11,7 +11,7 @@
 }
 .profile-body {
   background-color: #151A1D;
-  min-height: 280vh;
+  min-height: 100vh;
 }
 
 .contact-component {
@@ -31,7 +31,7 @@
 
   .profile-body {
     background-color: #151A1D;
-    min-height: 310vh;
+    min-height: 250vh;
   }
 }
 

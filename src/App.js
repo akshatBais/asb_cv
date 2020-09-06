@@ -57,13 +57,13 @@ function App() {
         <div className="profile-body">
           <MainComponent />
           <Divider />
-          <WorkExperience />
+          {/* <WorkExperience /> */}
           <Divider />
           <SkillsComponent />
           <Divider />
-          <div className="contact-component">
+          {/* <div className="contact-component">
             <ContactComponent />
-          </div>
+          </div> */}
         </div>
      
       <Footer />

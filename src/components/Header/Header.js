@@ -14,6 +14,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SendIcon from '@material-ui/icons/Send';
 import { Button } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import TwitterIcon from '@material-ui/icons/Twitter';
+
 
 function Header(props) {
   
@@ -30,7 +32,7 @@ function Header(props) {
         }
       },
       toolBarProps: {
-        minHeight: '50px',
+        minHeight: '40px',
         justifyContent : "space-between"
       },
       sectionDesktop: {
@@ -53,6 +55,16 @@ function Header(props) {
       homeIcon : {
         color: "#88F9FC",
         margin : "0 10px",
+        transform : "scale(1.1)",
+        fontSize : "large",
+        '&:hover': {
+          transform : "scale(2.2)"
+        },
+        // marginBottom : "20px"
+      },
+      menuIcon : {
+        color: "#88F9FC",
+        margin : "0px 10px 10px",
         transform : "scale(1.1)",
         fontSize : "large",
         '&:hover': {
@@ -131,10 +143,10 @@ function Header(props) {
       </div>
     
       <div className={classes.sectionMobile}>
-        <Toolbar>
-          <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen}>
-            <MenuIcon classes={{root: classes.menuButtonProps}}/>
-          </IconButton>
+        <Toolbar  classes={{ root: classes.toolBarProps }}>
+          {/* <IconButton color="inherit" aria-label="open drawer"  onClick={handleDrawerOpen}> */}
+            <MenuIcon viewBox="0 0 20 20" onClick={handleDrawerOpen} classes={{root : classes.menuIcon }}/>
+          {/* </IconButton> */}
         </Toolbar>
       </div>
       <Drawer variant="temporary" anchor='left' open={open} className={classes.drawer} classes={{
@@ -189,8 +201,13 @@ function Header(props) {
               <SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} />
               <span className = "nav-sidebar-links">Contact</span></a>
             </List>
+            <List>
+           <a className="header-link" href="https://in.linkedin.com/in/akshat-bais-588976157">
+              <TwitterIcon classes={{root : classes.homeIcon }} />
+              <span className = "nav-sidebar-links">Twitter</span>
+            </a>
+            </List>
 
-          {/* <a className="header-link" href="#experience"><SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} /><span className = "nav-links">Drop me a message</span></a> */}
 
             
           </div>
