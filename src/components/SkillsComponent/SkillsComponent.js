@@ -150,7 +150,7 @@ class SkillsComponent extends React.Component {
                                 </div>
                                 
                                 <div class="is-name">
-                                    <p>GoogleFirebase</p>
+                                    <p>Google Firebase</p>
                                     <CircularProgressWithLabel value={62} />
                                     <p>62%</p>
                                 </div>

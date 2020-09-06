@@ -15,7 +15,6 @@ import SendIcon from '@material-ui/icons/Send';
 import { Button } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
 
-
 function Header(props) {
   
   const drawerWidth = 240;
@@ -66,7 +65,16 @@ function Header(props) {
           color : "#88F9FC"
         }
       },
-      headerIcon : {
+      sendIcon : {
+        color: "#88F9FC",
+        margin : "0 10px",
+        transform : "scale(0.5)",
+        fontSize : "large",
+        '&:hover': {
+          transform : "rotate(-60deg) scale(1.6)",
+
+        },
+          transform: "rotate(-60deg)"
       },
       menuButtonProps: {
         color: '#D1D1D1'
@@ -105,16 +113,17 @@ function Header(props) {
 
         <Toolbar classes={{ root: classes.toolBarProps }}>
           <div className={classes.headerIcon}>
-            <Button classes={{ root: classes.sendMessageButton }} size="small" onClick={props.handleModalOpen}>
+          <a className="header-link" href="#experience"><SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} /><span className = "nav-links">Drop me a message</span></a>
+            {/* <Button classes={{ root: classes.sendMessageButton }} size="small" onClick={props.handleModalOpen}>
               <SendIcon classes={{root : classes.homeIcon }}/>
                 <span  className = "nav-links">Drop me a Message</span>
-            </Button>
+            </Button> */}
           </div>
           <ul id="navigation-menu">
-            <li className="option"><a href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
-            <li className="option"><a href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Projects</span></a></li>
-            <li className="option"><a href="#skills"><BuildOutlinedIcon viewBox="0 0 25 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
-            <li className="option"><a href="https://github.com/akshatBais" target="_blank"><GitHubIcon viewBox="0 0 25 22" classes={{root : classes.homeIcon }} /><span className = "nav-links">GitHub</span></a></li>
+            <li className="option"><a className="header-link" href="#"><HomeOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Home</span></a></li>
+            <li className="option"><a className="header-link" href="#experience"><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Projects</span></a></li>
+            <li className="option"><a className="header-link" href="#skills"><BuildOutlinedIcon viewBox="0 0 25 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Skills</span></a></li>
+            <li className="option"><a className="header-link" href="https://github.com/akshatBais" target="_blank"><GitHubIcon viewBox="0 0 25 22" classes={{root : classes.homeIcon }} /><span className = "nav-links">GitHub</span></a></li>
             {/* <li className="option"><a href="#contact"><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} /><span className = "nav-links">Contact</span></a></li> */}
             <li className="option"><a href="https://in.linkedin.com/in/akshat-bais-588976157" target="_blank"><LinkedInIcon viewBox="0 -1 20 22" classes={{root: classes.homeIcon}} /><span className = "nav-links">LinkedIn</span></a></li>
           </ul>
@@ -169,12 +178,20 @@ function Header(props) {
 
               </a>
             </List>
-            <List>
+            {/* <List>
               <a href="#contact" onClick={handleDrawerClose}><CallOutlinedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
               <span className = "nav-sidebar-links">Contact</span>
 
               </a>
+            </List> */}
+            <List>
+            <a className="header-link" href="#experience">
+              <SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} />
+              <span className = "nav-sidebar-links">Contact</span></a>
             </List>
+
+          {/* <a className="header-link" href="#experience"><SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} /><span className = "nav-links">Drop me a message</span></a> */}
+
             
           </div>
         </div>

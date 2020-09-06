@@ -5,6 +5,8 @@
     list-style-type: none;
 }
 
+
+
 .option {
     margin: 9px;
     transition: transform .2s; /* Animation */
@@ -26,8 +28,8 @@
     height: 100%;
     margin: 5px;
 }
-a {text-decoration: none; } 
-a:hover { transform : scale(1.9)}
+.header-link {text-decoration: none; } 
+.header-link:hover { transform : scale(1.9)}
 .nav-links {
     /* fff */
     /* BDBDBD */

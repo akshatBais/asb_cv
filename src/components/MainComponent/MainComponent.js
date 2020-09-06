@@ -6,6 +6,7 @@ import axios from 'axios';
 import download from 'downloadjs';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from "@material-ui/core/styles";
+import InfoIcon from '@material-ui/icons/Info';
 
 class MainComponent extends React.Component {
     
@@ -46,21 +47,26 @@ class MainComponent extends React.Component {
         return (
             <section id="#">
                 <div className="parent-column">
-
-                    
-
                     <div className="main-component">
                         <div className="profile-summary">
                           
                             <div className="profile-picture-name-designation-section">
                                 <div className="profile-picture-section">
                                     <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
+                                    <div className="download-cv">
+                                        <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
+                                            <GetAppIcon />
+                                            {(this.state.loading) ? 'Downloading...' : ' Download CV'}
+                                        </Button>
+                                    </div>
                                 </div>
                                 <div className="profile-name-designation-section">
                                     <div className="profile-name-section">
                                         <div className="profile-name-first">{this.state.name}</div>
                                         <div className="profile-name-middle">{this.state.middleName}</div>
                                         <div className="profile-name-last">{this.state.lastName}</div>
+                                        {/* <a className="profile-aboout-me" href="#experience"><InfoIcon  /></a> */}
+
                                     </div>
                                     <div className="profile-designation-section">
                                             {this.state.designation}
@@ -68,32 +74,23 @@ class MainComponent extends React.Component {
                                     <div className="profile-brief-section">
                                         {this.state.brief}
                                     </div>
+                                    <div className="download-cv-small">
+                                        <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
+                                            <GetAppIcon />
+                                            {(this.state.loading) ? 'Downloading...' : ' Download CV'}
+                                        </Button>
+                                    </div>
                                 </div>
-                                
+                              
                             </div>
                             
                             {/* <div className="body">Technology Enthusiast....
                           Demonstrated hand-on with several technologies both on front-end and back-end side. Love coding, developing logics and algorithms.
                           Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
                       </div> */}
-                            {/* <div className="download-cv">
-                                <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
-                                    <GetAppIcon />
-                                    {(this.state.loading) ? 'Downloading...' : ' Download CV'}
-                                </Button>
-                            </div> */}
+                            
                         </div>
                     </div>
-
-                    {/* <div className="column2">
-                    asdasd
-                </div> */}
-                    {/* <div className="column3">
-                    Secondary Skils
-                    <ul>
-                        <li><img src={require(baseUrl + "react.png")} /></li>
-                    </ul>
-                </div> */}
 
                 </div >
             </section>
