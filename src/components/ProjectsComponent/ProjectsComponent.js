@@ -12,13 +12,29 @@ const styles = theme => ({
       textAlign: 'center',
       border: 0,
       borderRadius: 2,
-      boxShadow: '0 1px 5px 2px #88F9FC',
+      overFlow: 'inherit',
       color: 'white',
-      height: 48,
-      padding: '0 30px'
+      marginBotton: "30px"
     },
     flexContainer : {
-        justifyContent: 'center'
+        justifyContent: 'center',
+        flexWrap: 'wrap'
+    },
+    indicator: {
+        [theme.breakpoints.down('sm')]: {
+            display: "none",
+
+          }
+    },
+    rootTab : {
+        color: "white",
+        fontWeight : "bold",
+        '&:hover' : {
+            color: "grey"
+        },
+        '&.click': {
+            textDecoration : "underline"
+        }
     }
   })
 class ProjectsComponent extends React.Component {
@@ -26,25 +42,45 @@ class ProjectsComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isDialogVisible: false
+            tabValue: 0,
         }
+
+        this.handleChange = this.handleChange.bind(this);
+
     }
+
+    handleChange(e,val) {
+        console.log({e,val})
+        this.setState({tabValue : val})
+    }
+
 
     render() {
         // const classes = useStyles();
         const {classes} = this.props;
+  
+          
         return (
             <section id="projects">
                 <div className="projects-section">
                     <div className="projects-summary">
-                    {/* {{root:classes.root, flexContainer:classes.flexContainer}} */}
-                    <Tabs value={3} classes={{root:classes.root, flexContainer:classes.flexContainer}}  aria-label="simple tabs">
-                        <Tab label="Item One"  />
-                        <Tab label="Item Two" />
-                        <Tab label="Item Three" />
-                    </Tabs>
+                        <div className="projects-summary-tab">
+                            <Tabs value={this.state.tabValue}  onChange={this.handleChange} 
+                            classes={{root:classes.root, flexContainer:classes.flexContainer,
+                                    indicator: classes.indicator}}  
+                            aria-label="simple tabs">
+                                <Tab classes={{root : classes.rootTab}} disableRipple={true} label="All"  />
+                                <Tab classes={{root : classes.rootTab}} label="Backend" />
+                                <Tab classes={{root : classes.rootTab}} label="Angular/React" />
+                                <Tab classes={{root : classes.rootTab}} label="Full Stack" />
+                            </Tabs>
+                        </div>
+                        <div classNAme="projects-summary-details">
+                           
+                        </div>
+               
                     </div>
-                </div>
+                  </div>
             </section>
         )
 
