@@ -54,17 +54,7 @@ function CircularProgressWithLabel(props) {
     value: PropTypes.number.isRequired,
   };
 class SkillsComponent extends React.Component {
-    componentWillMount() {
-    }
-
-    componentDidMount() {
-        // console.log("Did mount");
-    }
-
-    componentWillUnmount() {
-        // console.log("About to unmount")
-    }
-
+ 
     render() {
         // const {classes} = this.props;
 

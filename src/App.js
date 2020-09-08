@@ -12,6 +12,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 
 import { makeStyles } from '@material-ui/core/styles';
+import ProjectsComponent from './components/ProjectsComponent/ProjectsComponent';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -57,7 +58,7 @@ function App() {
         <div className="profile-body">
           <MainComponent />
           <Divider />
-          {/* <WorkExperience /> */}
+          <ProjectsComponent />
           <Divider />
           <SkillsComponent />
           <Divider />
