@@ -5,16 +5,29 @@
     flex-direction: 'column';
     justify-content: center;
     background-color: #151A1D;
-    height:80vh;
+    min-height:90vh;
     text-align: center;
 }
 .projects-summary {
-    width: 75%;
+    width: 80%;
+}
+.project-cards {
+justify-content: center;
 }
 .projects-summary-tab {
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 50px;
     /* width: 75%; */
 }
 
+
+
 projects-summary-details {  margin-top: 30px; }
+
+@media all and (max-width: 600px) {
+    .projects-summary-tab {
+        /* margin-top: 80px; */
+        margin-bottom: 10px;
+        /* width: 75%; */
+    }
+}

@@ -165,8 +165,8 @@ function Header(props) {
             </List>
             <Divider />
             <List>
-              <a href="#experience" onClick={handleDrawerClose}><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
-              <span className = "nav-sidebar-links">Work Exp.</span>
+              <a href="#projects" onClick={handleDrawerClose}><CodeRoundedIcon viewBox="0 0 20 20" classes={{root : classes.homeIcon }} />
+              <span className = "nav-sidebar-links">Projects</span>
 
               </a>
             </List>

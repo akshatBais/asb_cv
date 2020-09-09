@@ -2,19 +2,15 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import './ProjectsComponent.css';
+import AllProjectsComponent from './AllProjectsComponent/AllProjectsComponent';
+import FullStackProjectsComponent from './FullStackProjectsComponent/FullStackProjectsComponent';
+
 
 
 const styles = theme => ({
     root: {
-    //   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      textAlign: 'center',
-      border: 0,
-      borderRadius: 2,
-      overFlow: 'inherit',
-      color: 'white',
-      marginBotton: "30px"
+      textAlign: 'center'
     },
     flexContainer : {
         justifyContent: 'center',
@@ -23,18 +19,23 @@ const styles = theme => ({
     indicator: {
         [theme.breakpoints.down('sm')]: {
             display: "none",
-
           }
     },
     rootTab : {
         color: "white",
         fontWeight : "bold",
         '&:hover' : {
-            color: "grey"
+            color: "grey",
+            borderBottom: 'solid 1px red',
+            [theme.breakpoints.down('sm')]: {
+                '&:hover' : {
+                    color: "white",
+                    borderBottom: 'solid 1px red',
+                }
+              },
         },
-        '&.click': {
-            textDecoration : "underline"
-        }
+        minWidth: "0px",
+        marginRight: "20px"
     }
   })
 class ProjectsComponent extends React.Component {
@@ -69,16 +70,17 @@ class ProjectsComponent extends React.Component {
                             classes={{root:classes.root, flexContainer:classes.flexContainer,
                                     indicator: classes.indicator}}  
                             aria-label="simple tabs">
-                                <Tab classes={{root : classes.rootTab}} disableRipple={true} label="All"  />
+                                <Tab classes={{root : classes.rootTab}} label="All"  />
                                 <Tab classes={{root : classes.rootTab}} label="Backend" />
                                 <Tab classes={{root : classes.rootTab}} label="Angular/React" />
                                 <Tab classes={{root : classes.rootTab}} label="Full Stack" />
                             </Tabs>
                         </div>
-                        <div classNAme="projects-summary-details">
-                           
+                        <div className="projects-summary-details">
+                            <AllProjectsComponent isHidden={this.state.tabValue} />
+                            <FullStackProjectsComponent isHidden={this.state.tabValue} />
+                        
                         </div>
-               
                     </div>
                   </div>
             </section>
