@@ -26,12 +26,15 @@ function AllProjectsComponent(props) {
             width: "280px",
             [theme.breakpoints.down('sm')]: {
                 height: "230px",
-                width: "230px",
+                width: "100%",
+            },
+            '&:hover': {
+                transform: "scale(1.1)"
             },
             visibility: "visible",
             opacity: 1,
-            transition: "opacity 2s linear"
-            
+            transition: "opacity 2s linear",
+            borderRadius: "8vh"
 
         },
         cardAfter: {
@@ -48,16 +51,31 @@ function AllProjectsComponent(props) {
             visibility: "hidden",
             opacity: 0,
             transition: "visibility 0s 1s, opacity 1s linear",
-            position: "absolute"
-              
+            position: "absolute",
+            borderRadius: "8vh"
+            
         },
         media: {
             height: "150px",
              paddingTop: '6%',
+             [theme.breakpoints.down('sm')]: {
+                height: "95px",
+                // width: "230px",
+            },
         },
         content: {
-            height: "10px"
+            height: "10px",
+            [theme.breakpoints.down('sm')]: {
+                height: "6px",
+                // width: "230px",
+            },
         },
+        description: {
+            fontSize: "14px",
+            [theme.breakpoints.down('sm')]: {
+                fontSize: "13px"
+            },
+        }
  
     })
   );
@@ -79,10 +97,10 @@ function AllProjectsComponent(props) {
             />
             <CardActionArea>
                 <CardContent>
-                    <Typography gutterBottom variant="h7">
+                    <Typography variant="h7">
                         Covenant Monitoring Engine
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" color="textSecondary" className={classes.description}>
                     A monitoring engine for ING bank application for lending domain
                 </Typography>
                 </CardContent>
@@ -99,7 +117,7 @@ function AllProjectsComponent(props) {
                         <Typography gutterBottom variant="h7">
                             Content Review Portal for viacom18
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        <Typography variant="body2" color="textSecondary" className={classes.description}>
                         A portal for legal team to review the content and share comments and search mechanism to find any content
                     </Typography>
                     </CardContent>
@@ -117,7 +135,7 @@ function AllProjectsComponent(props) {
                         <Typography gutterBottom variant="h7">
                             Invoice Portal for viacom18
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        <Typography variant="body2" color="textSecondary" className={classes.description}>
                         Portal for customers to download invoices. Admin to navigate through all the invoices
                     </Typography>
                     </CardContent>
@@ -139,7 +157,7 @@ function AllProjectsComponent(props) {
                         <Typography gutterBottom variant="h7">
                             Nikki Rafiki : Sports prediction game app
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        <Typography variant="body2" color="textSecondary"className={classes.description}>
                         Developed the backend using google Firebase DB, cloud functions and push notifications.
                     </Typography>
                     </CardContent>
@@ -160,7 +178,7 @@ function AllProjectsComponent(props) {
                         <Typography gutterBottom variant="h7">
                             Web Outlook Plugin
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        <Typography variant="body2" color="textSecondary" className={classes.description}>
                     Web outlook plugin using Angular 9 and nodejs, dealing with Microsoft graph apis.Available on outlook store.
                     </Typography>
                     </CardContent>
@@ -178,7 +196,7 @@ function AllProjectsComponent(props) {
                     <Typography gutterBottom variant="h7">
                         Google Plugin
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" color="textSecondary" className={classes.description}>
                     Google plugin made using App script and nodejs. Capturing users' meetings information and recurring meeting
                 </Typography>
                 </CardContent>
@@ -195,7 +213,7 @@ function AllProjectsComponent(props) {
                     <Typography gutterBottom variant="h7">
                         Khel Play Rummy App : India's largest online gaming app
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" color="textSecondary" className={classes.description}>
                     Working on re-architecturing the gaming app
                 </Typography>
                 </CardContent>

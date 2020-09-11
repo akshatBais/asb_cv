@@ -4,9 +4,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import './ProjectsComponent.css';
 import AllProjectsComponent from './AllProjectsComponent/AllProjectsComponent';
-import FullStackProjectsComponent from './FullStackProjectsComponent/FullStackProjectsComponent';
-
-
 
 const styles = theme => ({
     root: {
@@ -38,6 +35,8 @@ const styles = theme => ({
         marginRight: "20px"
     }
   })
+
+// ak
 class ProjectsComponent extends React.Component {
 
     constructor(props) {
