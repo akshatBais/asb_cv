@@ -48,9 +48,6 @@ function App() {
 
           <div className={classes.paper}>
             <ContactComponent />
-
-            {/* <h2 id="transition-modal-title">Transition modal</h2> */}
-            {/* <p id="transition-modal-description">react-transition-group animates me.</p> */}
           </div>
         </Fade>
         </Modal>
@@ -62,6 +59,7 @@ function App() {
           <Divider />
           <SkillsComponent />
           <Divider />
+          <ContactComponent />
           {/* <div className="contact-component">
             <ContactComponent />
           </div> */}

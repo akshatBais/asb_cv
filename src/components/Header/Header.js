@@ -125,7 +125,7 @@ function Header(props) {
 
         <Toolbar classes={{ root: classes.toolBarProps }}>
           <div className={classes.headerIcon}>
-          <a href="#experience"><SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} /><span className = "nav-links">Drop me a message</span></a>
+          <a href="#contact"><SendIcon viewBox="0 0 20 20" classes={{root : classes.sendIcon }} /><span className = "nav-links">Drop me a message</span></a>
             {/* <Button classes={{ root: classes.sendMessageButton }} size="small" onClick={props.handleModalOpen}>
               <SendIcon classes={{root : classes.homeIcon }}/>
                 <span  className = "nav-links">Drop me a Message</span>

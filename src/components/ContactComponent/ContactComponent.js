@@ -75,8 +75,8 @@ class ContactComponent extends React.Component {
         const {classes} = this.props;
         return (
 
-            // <section className="contact" id="contact">
-                // <Divider />
+            <section className="contact" id="contact">
+                <Divider />
                 <div className="contact-information">
                     <div className="message">
                         <p><i>If you like my profile and think my skills can be leveraged for your project and requirements.
@@ -120,7 +120,7 @@ class ContactComponent extends React.Component {
                         </div>
                     </div>
                 </div>
-            // </section>
+             </section>
 
         )
 

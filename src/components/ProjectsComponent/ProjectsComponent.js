@@ -71,14 +71,15 @@ class ProjectsComponent extends React.Component {
                                     indicator: classes.indicator}}  
                             aria-label="simple tabs">
                                 <Tab classes={{root : classes.rootTab}} label="All"  />
-                                <Tab classes={{root : classes.rootTab}} label="Backend" />
-                                <Tab classes={{root : classes.rootTab}} label="Angular/React" />
                                 <Tab classes={{root : classes.rootTab}} label="Full Stack" />
+                                 <Tab classes={{root : classes.rootTab}} label="Others" />
+                                {/* <Tab classes={{root : classes.rootTab}} label="" /> */}
                             </Tabs>
                         </div>
                         <div className="projects-summary-details">
+                            
                             <AllProjectsComponent isHidden={this.state.tabValue} />
-                            <FullStackProjectsComponent isHidden={this.state.tabValue} />
+                            {/* <FullStackProjectsComponent isHidden={this.state.tabValue} /> */}
                         
                         </div>
                     </div>

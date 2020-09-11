@@ -77,11 +77,10 @@ class Component extends React.Component<InternalProps, State> {
         const { tempUser } = this.state
         return (
             <div className="register-container">
-                {/* {!tempUser ? ( */}
-                    <RegisterFirst next={this.setTempUser.bind(this)} tempUser={tempUser} errors={this.props.errors}/>
-                 {/* ) : ( */}
-                
-                {/* )}  */}
+                <RegisterFirst next={this.setTempUser.bind(this)} 
+                tempUser={tempUser} errors={this.props.errors}
+                nextUser={this.submitUser.bind(this)}
+                />
             </div>
         )
     }

@@ -5,7 +5,7 @@
     flex-direction: 'column';
     justify-content: center;
     background-color: #151A1D;
-    min-height:90vh;
+    min-height:100vh;
     text-align: center;
 }
 .projects-summary {
