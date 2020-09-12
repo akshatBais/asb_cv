@@ -78,7 +78,6 @@ class ProjectsComponent extends React.Component {
                         <div className="projects-summary-details">
                             
                             <AllProjectsComponent isHidden={this.state.tabValue} />
-                            {/* <FullStackProjectsComponent isHidden={this.state.tabValue} /> */}
                         
                         </div>
                     </div>

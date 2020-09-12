@@ -59,7 +59,7 @@ function AllProjectsComponent(props) {
             height: "150px",
              paddingTop: '6%',
              [theme.breakpoints.down('sm')]: {
-                height: "95px",
+                height: "125px",
                 // width: "230px",
             },
         },
@@ -81,35 +81,34 @@ function AllProjectsComponent(props) {
   );
   const classes = useStyles();
   
-  const handleVisibility = () => {
-    setVisibility(!visible);
-  }
+
 
   return (
     // (props.isHidden === 0 ) ? 
     <div className="project-cards">
         {/* hidden={props.isHidden == 1} */}
-        <Card classes={{root:props.isHidden == 1 || props.isHidden == 2 ? classes.cardAfter : classes.card}} >
+        <Card classes={{root:props.isHidden == 1 || props.isHidden == 2 ? classes.cardAfter : classes.card}}>
             <CardMedia
             className={classes.media}
-            image= {require ("../images/asb.jpg")}
-            title="CME"
+            image= {require ("../images/kpr.jpeg")}
+            title="KhelPlayRummy"
             />
             <CardActionArea>
                 <CardContent>
-                    <Typography variant="h7">
-                        Covenant Monitoring Engine
+                    <Typography gutterBottom variant="h7">
+                        Khel Play Rummy App : India's largest online gaming app
                     </Typography>
                     <Typography variant="body2" color="textSecondary" className={classes.description}>
-                    A monitoring engine for ING bank application for lending domain
+                    Working on re-architecturing the gaming app
                 </Typography>
                 </CardContent>
             </CardActionArea>
         </Card>
+       
         <Card classes={{root:props.isHidden == 2 ? classes.cardAfter : classes.card}}>
             <CardMedia
             className={classes.media}
-            image="../images/asb.jpg"
+            image={require("../images/v18.png")}
             title="CRISP"
             />
             <CardActionArea>
@@ -118,7 +117,7 @@ function AllProjectsComponent(props) {
                             Content Review Portal for viacom18
                         </Typography>
                         <Typography variant="body2" color="textSecondary" className={classes.description}>
-                        A portal for legal team to review the content and share comments and search mechanism to find any content
+                        To review content and share comments with partial and full text search mechanism
                     </Typography>
                     </CardContent>
             </CardActionArea>
@@ -127,7 +126,7 @@ function AllProjectsComponent(props) {
         <Card classes={{root:props.isHidden == 2 ? classes.cardAfter : classes.card}}>
             <CardMedia
             className={classes.media}
-            image="../images/asb.jpg"
+            image={require("../images/v18.png")}
             title="Invoice Portal"
             />
             <CardActionArea>
@@ -145,8 +144,8 @@ function AllProjectsComponent(props) {
         <Card classes={{root:props.isHidden == 1 || props.isHidden == 2 ? classes.cardAfter : classes.card}}>
             <CardMedia
             className={classes.media}
-            image="/images/asb.jpg"
-            title="Contemplative Reptile"
+            image= {require ("../images/nr.jpg")}
+            title="Nikki Rafiki"
             />
             <CardActionArea>
                     <CardMedia
@@ -202,19 +201,15 @@ function AllProjectsComponent(props) {
                 </CardContent>
             </CardActionArea>
         </Card>
-        <Card classes={{root:props.isHidden == 1 || props.isHidden == 2 ? classes.cardAfter : classes.card}}>
-            <CardMedia
-            className={classes.media}
-            image= {require ("../images/asb.jpg")}
-            title="KhelPlayRummy"
-            />
+        <Card classes={{root:props.isHidden == 1 || props.isHidden == 2 ? classes.cardAfter : classes.card}} >
             <CardActionArea>
+                <CardMedia className={classes.media} image= {require ("../images/ing.jpg")} title="CME" />
                 <CardContent>
-                    <Typography gutterBottom variant="h7">
-                        Khel Play Rummy App : India's largest online gaming app
+                    <Typography variant="h7">
+                        Covenant Monitoring Engine
                     </Typography>
                     <Typography variant="body2" color="textSecondary" className={classes.description}>
-                    Working on re-architecturing the gaming app
+                    A monitoring engine for ING bank application for lending domain
                 </Typography>
                 </CardContent>
             </CardActionArea>

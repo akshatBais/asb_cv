@@ -12,6 +12,12 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+const styles = theme => ({
+    linearBar: {
+        height: "5px"
+    }
+})
+
 const baseUrl = "./skills-images/";
 const imageMap = {
     60 : 'react.png',
@@ -54,9 +60,17 @@ function CircularProgressWithLabel(props) {
     value: PropTypes.number.isRequired,
   };
 class SkillsComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+
+    }
+
+
  
     render() {
-        // const {classes} = this.props;
+        const {classes} = this.props;
 
         return (
             <div id="skills" className="skills-component">
@@ -70,7 +84,9 @@ class SkillsComponent extends React.Component {
                                                 <img className="skill-img" src={require(baseUrl + "nodejs.png")} />
                                             </div>
                                             <div className="ps-name-progress">
-                                                <LinearProgress variant="determinate" value={80}  />
+                                                {/* <span>nodejs</span> */}
+                                                <LinearProgress classes={{root:classes.linearBar}} 
+                                                variant="determinate" value={80}  />
                                             </div>
                                         </li>
                                         <li className="ps-name">
@@ -155,4 +171,4 @@ class SkillsComponent extends React.Component {
 
 
 
-export default SkillsComponent;
+export default withStyles(styles)(SkillsComponent);
