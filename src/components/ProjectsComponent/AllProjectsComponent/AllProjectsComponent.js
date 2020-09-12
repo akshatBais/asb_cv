@@ -27,6 +27,8 @@ function AllProjectsComponent(props) {
             [theme.breakpoints.down('sm')]: {
                 height: "230px",
                 width: "100%",
+                margin: "20px 0px",
+
             },
             '&:hover': {
                 transform: "scale(1.1)"
@@ -148,10 +150,10 @@ function AllProjectsComponent(props) {
             title="Nikki Rafiki"
             />
             <CardActionArea>
-                    <CardMedia
+                    {/* <CardMedia
                     image="../../images/asb.jpg"
                     title="Nikki Rafiki"
-                    />
+                    /> */}
                     <CardContent>
                         <Typography gutterBottom variant="h7">
                             Nikki Rafiki : Sports prediction game app
@@ -166,13 +168,13 @@ function AllProjectsComponent(props) {
         <Card classes={{root:props.isHidden == 2 ? classes.cardAfter : classes.card}}>
             <CardMedia
             className={classes.media}
-            image="/images/asb.jpg"
+            image= {require ("../images/owa.png")}
             title="Web Outlook PLugin"
             />
             <CardActionArea>
-                    <CardMedia
-                    image="../../images/asb.jpg"
-                    />
+                    {/* <CardMedia
+                    image="../images/owa.png"
+                    /> */}
                     <CardContent>
                         <Typography gutterBottom variant="h7">
                             Web Outlook Plugin
