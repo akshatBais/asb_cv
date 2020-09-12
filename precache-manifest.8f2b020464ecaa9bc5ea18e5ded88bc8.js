@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "523eef607d9291432beecdfb913b33db",
+    "revision": "1f7c86e4e879e96380dbf89a023ae7ac",
     "url": "/asb_cv/index.html"
   },
   {
-    "revision": "c8245924e243447b5c01",
-    "url": "/asb_cv/static/css/main.39ec5865.chunk.css"
+    "revision": "7e061a8a1bda567e063c",
+    "url": "/asb_cv/static/css/main.0cbccee8.chunk.css"
   },
   {
-    "revision": "ba6fb9890537e123611b",
-    "url": "/asb_cv/static/js/2.867d36f7.chunk.js"
+    "revision": "a8d71e9192e4248acd90",
+    "url": "/asb_cv/static/js/2.9deb6464.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/asb_cv/static/js/2.867d36f7.chunk.js.LICENSE.txt"
+    "url": "/asb_cv/static/js/2.9deb6464.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8245924e243447b5c01",
-    "url": "/asb_cv/static/js/main.70f033e1.chunk.js"
+    "revision": "7e061a8a1bda567e063c",
+    "url": "/asb_cv/static/js/main.defdf288.chunk.js"
   },
   {
     "revision": "1c27fdb1abe734d1e93c",
@@ -44,12 +44,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/asb_cv/static/media/firebase.bb5d30fe.png"
   },
   {
+    "revision": "ac994607b99fcb66dd57f95c2610964f",
+    "url": "/asb_cv/static/media/ing.ac994607.jpg"
+  },
+  {
     "revision": "513f06d8b5362f34d9c2511ea8f3217e",
     "url": "/asb_cv/static/media/java.513f06d8.png"
   },
   {
     "revision": "2d2e31cc63a96c7e6044f52d30fd21b9",
     "url": "/asb_cv/static/media/js.2d2e31cc.svg"
+  },
+  {
+    "revision": "4f7f390c90e57126bc647c94d767778b",
+    "url": "/asb_cv/static/media/kpr.4f7f390c.jpeg"
   },
   {
     "revision": "3d40302b0864db8e2210e295152d8543",
@@ -64,7 +72,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/asb_cv/static/media/nodejs.d42672d4.png"
   },
   {
+    "revision": "3b312185bd7d5660a075b5d722c26571",
+    "url": "/asb_cv/static/media/nr.3b312185.jpg"
+  },
+  {
     "revision": "47ce6e77f039020ee2e76a10c1e988e9",
     "url": "/asb_cv/static/media/react.47ce6e77.png"
+  },
+  {
+    "revision": "afbb564b16d418a19aeec04ab4d312bc",
+    "url": "/asb_cv/static/media/v18.afbb564b.png"
   }
 ]);
