@@ -4,11 +4,17 @@ import { Divider, Button } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import CallIcon from '@material-ui/icons/Call';
 import {httpcall} from '../common';
-import CircularProgress from '@material-ui/core/CircularProgress';  
+import CircularProgress from '@material-ui/core/CircularProgress';
+import TextField from '@material-ui/core/TextField';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
     margin : {
         margin : theme.spacing(1)
+    },
+    grid: {
+        justifyContent: "center"
     }
 })
 // let dissableSubmitButton = true;
@@ -79,37 +85,47 @@ class ContactComponent extends React.Component {
                 <Divider />
                 <div className="contact-information">
                     <div className="message">
-                        <p><i>If you like my profile and think my skills can be leveraged for your project and requirements.
-                        Kindly fill your information and leave a message. Thanks !!</i></p>
+                        <p>If you like my profile and think my skills can be leveraged for your project and requirements.
+                        Kindly fill your information and leave a message. Thanks !!</p>
                     </div>
                     <div className="message">
                         <p>PS : You can still leave a message along with your details if you want to get in touch
                              regarding your personal projects or any sort of help.
                     </p>
                     </div>
-                    {/* onSubmit={this.haandleFormSubmit} */}
-                    <form id="formRef" hidden={this.state.isFormDisabled} className="form-details"  >
-                        <div className="form-control">
-                            <input title={"Full Name"} name={"name"} value={this.state.name} placeholder={"Enter Your Name"} onChange={this.handleInput} />
-                        </div>
-                        <div className="form-control">
-                            <input type="number" name={"contactNumber"} value={this.state.contactNumber === 0 ? "" : this.state.contactNumber} placeholder={"Contact number"} onChange={this.handleInput} />
-                            <CallIcon />
-                        </div>
-                        <div className="form-control-textarea">
-                            <textarea  placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
-                        </div>
-                        <div hidden = {this.state.isButtonDisabled}>
-                            <Button  disabled={this.state.name == "" ? true : false}  variant="outlined" color="primary"  className={classes.margin}  onClick={this.haandleFormSubmit}>
-                                Send To Akshat
-                            </Button>
-                        </div>
-                       
-                        <div  hidden= {!this.state.isButtonDisabled}>
-                            <CircularProgress/>
-                        </div>
-                        {/* <button className = "send-data">Send Data</button> */}
-                    </form>
+                    <div className="form-section">
+                        <form id="formRef" hidden={this.state.isFormDisabled} className="form-details"  >
+                            <Grid container spacing={1} alignItems="flex-end" classes={{root:classes.grid}}>
+                                <Grid item>
+                                    <AccountCircle />
+                                </Grid>
+                                <Grid item>
+                                    <TextField label="Name"  />
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={1} alignItems="flex-end" classes={{root:classes.grid}}>
+                                <Grid item>
+                                    <CallIcon />
+                                </Grid>
+                                <Grid item>
+                                    <TextField type="number" label="Contact Number" />
+                                </Grid>
+                            </Grid>
+                            <div className="form-control-textarea">
+                                <textarea  placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
+                            </div>
+                            <div hidden = {this.state.isButtonDisabled}>
+                                <Button  disabled={this.state.name == "" ? true : false}  variant="outlined"
+                                color="primary"  className={classes.margin}  onClick={this.haandleFormSubmit}>
+                                    Send To Akshat
+                                </Button>
+                            </div>
+                            <div  hidden= {!this.state.isButtonDisabled}>
+                                <CircularProgress/>
+                            </div>
+                        </form>
+                    </div>
+
                     <div className="thankyou-message" hidden = {!this.state.isFormDisabled}>
                         Thankyou For reaching me !
                         <div className="another-message">

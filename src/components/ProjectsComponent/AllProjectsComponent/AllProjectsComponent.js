@@ -75,7 +75,7 @@ function AllProjectsComponent(props) {
         description: {
             fontSize: "14px",
             [theme.breakpoints.down('sm')]: {
-                fontSize: "13px"
+                fontSize: "12px"
             },
         }
  
@@ -106,7 +106,6 @@ function AllProjectsComponent(props) {
                 </CardContent>
             </CardActionArea>
         </Card>
-       
         <Card classes={{root:props.isHidden == 2 ? classes.cardAfter : classes.card}}>
             <CardMedia
             className={classes.media}
@@ -218,10 +217,6 @@ function AllProjectsComponent(props) {
         </Card>
    
    </div>
-    //  : <div />
-    
-
-
 
   );
 }

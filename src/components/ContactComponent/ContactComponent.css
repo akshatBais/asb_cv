@@ -1,28 +1,33 @@
 .contact {
+    margin: 2px 10px;
+    margin-bottom: 40px;
     display: flex;
-    min-height: 100vh;
     justify-content: center;
+    background-color: #151A1D;
+    height:80vh;
 }
 
 .contact-information {
     /* margin: 100px; */
     /* padding: 50px; */
-    width: 100%;
+    width: 75%;
     text-align: center;
+    justify-content: center;
 }
 
 .form-details {
     flex-wrap: wrap;
 }
 
-.form-control {
-    text-align: center;
-    display: inline-flex;
-    width: 60%;
-    border: solid rgb(178, 161, 194);
-    border-radius: 100px;
-    margin: 20px;
-    height: 40px;
+.form-section {
+    margin: 40px;
+}
+
+.MuiInput-underline:before {
+    border-bottom: 0.5px solid aqua !important;
+}
+.MuiInput-underline:after {
+    border-bottom: 2px solid aqua !important;
 }
 
 /* .form-control-textarea {

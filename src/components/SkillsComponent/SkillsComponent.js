@@ -152,48 +152,6 @@ class SkillsComponent extends React.Component {
                                         </AccordionDetails>
                                     </Accordion>
                                     })}
-                                   
-                                        {/* <li className="ps-name">
-                                            <div className="ps-name-image">
-                                                <img className="skill-img" src={require(baseUrl + "nodejs.png")} />
-                                            </div>
-                                            <div className="ps-name-progress">
-                                                <LinearProgress classes={{root:classes.linearBar}} 
-                                                variant="determinate" value={80}  />
-                                            </div>
-                                        </li> */}
-                                        {/* <li className="ps-name">
-                                            <div className="ps-name-image">
-                                                <img className="skill-img" src={require(baseUrl + "java.png")} />
-                                            </div>
-                                            <div className="ps-name-progress">
-                                                <LinearProgress variant="determinate" value={65}  />
-                                            </div>
-                                        </li>
-                                        <li className="ps-name">
-                                        <div className="ps-name-image">
-                                                <img className="skill-img" src={require(baseUrl + "angular.svg")} />
-                                            </div>
-                                            <div className="ps-name-progress">
-                                                <LinearProgress variant="determinate" value={70} />
-                                            </div>
-                                        </li>
-                                        <li className="ps-name">
-                                        <div className="ps-name-image">
-                                                <img className="skill-img" src={require(baseUrl + "js.svg")} />
-                                            </div>
-                                            <div className="ps-name-progress">
-                                                <LinearProgress variant="determinate" value={85} />
-                                            </div>
-                                        </li>
-                                        <li className="ps-name">
-                                        <div className="ps-name-image">
-                                                <img className="skill-img" src={require(baseUrl + "docker.png")} />
-                                            </div>
-                                            <div className="ps-name-progress">
-                                                <LinearProgress variant="determinate" value={65}  />
-                                            </div>
-                                        </li> */}
                                     </ul>
                             </div>
                             <div className="secondary-skills">

@@ -8,6 +8,20 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from "@material-ui/core/styles";
 import InfoIcon from '@material-ui/icons/Info';
 
+const styles = theme => ({
+    root: {
+        color: "red",
+        border: "1px solid aqua",
+        "&:hover" : {
+            transform: "scale(1.1)",
+            color : "#88F9FC"
+        }
+    },
+    outlinedPrimary: {
+        color: "red"
+    }
+})
+
 class MainComponent extends React.Component {
     
     constructor(props) {
@@ -44,6 +58,8 @@ class MainComponent extends React.Component {
     }
 
     render() {
+        const {classes} = this.props;
+
         return (
             <section id="#">
                 <div className="parent-column">
@@ -54,7 +70,9 @@ class MainComponent extends React.Component {
                                 <div className="profile-picture-section">
                                     <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
                                     <div className="download-cv">
-                                        <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
+                                        <Button variant="outlined" color="primary"
+                                        classes={{ root: classes.root}}
+                                        disabled={this.state.loading} onClick={this.downloadCv}>
                                             <GetAppIcon />
                                             {(this.state.loading) ? 'Downloading...' : ' Download CV'}
                                         </Button>
@@ -98,4 +116,4 @@ class MainComponent extends React.Component {
     }
 }
 
-export default MainComponent;
+export default withStyles(styles)(MainComponent);
