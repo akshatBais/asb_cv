@@ -26,6 +26,15 @@
     /* min-width: 100%; */
     flex-grow: 13;
 }
+.skill-description {
+    display: flex;
+    flex-direction: row;
+}
+.skill {
+    color: white;
+    font-weight: bolder;
+    margin-right: 20px;
+}
 
 .intermediate-skills {
     flex-grow: 0.8;
@@ -49,7 +58,7 @@ p {
 }
 .is-name {
     flex: 25%;
-    padding: 20px;
+    padding: 10px;
     margin: 5px;
     /* border: 1px solid red; */
     text-align: center;

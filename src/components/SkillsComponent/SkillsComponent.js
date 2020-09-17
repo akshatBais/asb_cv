@@ -103,7 +103,7 @@ class SkillsComponent extends React.Component {
                     imagePath: require(baseUrl + "js.svg")
                 },
                 {
-                    skill: "docker",
+                    skill: "Docker",
                     proficiency : 65,
                     description: "Dealt with making docker images, deploying applications in containers ",
                     imagePath: require(baseUrl + "docker.png")
@@ -146,9 +146,15 @@ class SkillsComponent extends React.Component {
                                         </Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
-                                        <Typography>
-                                            {value.skill} : {value.description}
-                                        </Typography>
+                                            <div className="skill-description">
+                                                <div className="skill">
+                                                {   value.skill} : 
+                                                </div>
+                                                <div>
+                                                <Typography>{value.description}</Typography>
+                                                </div>
+                                            </div>
+                                      
                                         </AccordionDetails>
                                     </Accordion>
                                     })}

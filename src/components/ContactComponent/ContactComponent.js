@@ -13,8 +13,20 @@ const styles = theme => ({
     margin : {
         margin : theme.spacing(1)
     },
-    grid: {
-        justifyContent: "center"
+    textField : {
+        color: "white",
+        width: "100%"
+    },
+    label: {
+        color: "grey"
+    },
+    accountIcon: {
+        color: "yellow",
+        margin: "20px 10px 0px"
+    },
+    callIcon: {
+        color: "pink",
+        margin: "20px 10px 0px"
     }
 })
 // let dissableSubmitButton = true;
@@ -95,22 +107,23 @@ class ContactComponent extends React.Component {
                     </div>
                     <div className="form-section">
                         <form id="formRef" hidden={this.state.isFormDisabled} className="form-details"  >
-                            <Grid container spacing={1} alignItems="flex-end" classes={{root:classes.grid}}>
-                                <Grid item>
-                                    <AccountCircle />
-                                </Grid>
-                                <Grid item>
-                                    <TextField label="Name"  />
-                                </Grid>
-                            </Grid>
-                            <Grid container spacing={1} alignItems="flex-end" classes={{root:classes.grid}}>
-                                <Grid item>
-                                    <CallIcon />
-                                </Grid>
-                                <Grid item>
-                                    <TextField type="number" label="Contact Number" />
-                                </Grid>
-                            </Grid>
+                            <div className="form-control">
+                                <div> <AccountCircle classes={{root: classes.accountIcon}} /> </div>
+                                <TextField 
+                                    label="Name"  
+                                    InputProps={{
+                                        className: classes.textField
+                                }}/>
+                            </div>
+                            <div className="form-control">
+                                <div><CallIcon  classes={{root:classes.callIcon}} /></div>
+                                <div><TextField type="number" 
+                                    label="Contact Number" 
+                                    InputProps={{
+                                        className: classes.textField
+                            }}/></div>
+
+                            </div>
                             <div className="form-control-textarea">
                                 <textarea  placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
                             </div>
