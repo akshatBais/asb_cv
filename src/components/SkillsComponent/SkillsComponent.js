@@ -1,5 +1,5 @@
 import React from 'react';
-import '../SkillsComponent/SkillsComponent.css';
+import './SkillsComponent.css';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -148,10 +148,10 @@ class SkillsComponent extends React.Component {
                                         <AccordionDetails>
                                             <div className="skill-description">
                                                 <div className="skill">
-                                                {   value.skill} : 
+                                                {   value.skill}
                                                 </div>
                                                 <div>
-                                                <Typography>{value.description}</Typography>
+                                                <Typography> {value.description}</Typography>
                                                 </div>
                                             </div>
                                       

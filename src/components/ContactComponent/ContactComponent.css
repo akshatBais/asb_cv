@@ -26,11 +26,14 @@ p{
 }
 
 .message {
-    margin: 30px;
+    margin: 10px 10px 30px;
 }
 
-.form-section {
-    /* margin: 40px; */
+.basic-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .form-control{
@@ -107,20 +110,25 @@ textarea {
 
 @media all and (max-width : 500px) {
     .contact-information {
-        margin: 20px;
-        padding: 5px;
+        margin: 5px;
+        width: 85%;
+        /* padding: 5px; */
     }
 
-
+    .form-control{
+        margin: 10px;
+    }
     .form-control-textarea {
-        width: 80%
+        /* width: 80% */
     }
 
     textarea {
-        width: 90%;
+        width: 80%;
         min-height: 50px;
     }
-
+    p {
+        margin-top: 0px;
+    }
     .message {
         font-size: small;
     }

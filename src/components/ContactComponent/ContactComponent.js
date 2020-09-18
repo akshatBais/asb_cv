@@ -1,5 +1,5 @@
 import React, { FormEventHandler } from 'react';
-import '../ContactComponent/ContactComponent.css'
+import './ContactComponent.css'
 import { Divider, Button } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import CallIcon from '@material-ui/icons/Call';
@@ -11,7 +11,11 @@ import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
     margin : {
-        margin : theme.spacing(1)
+        margin : theme.spacing(1),
+        color: "aqua",
+        "&:hover" : {
+            transform : "scale(1.2)"
+        }
     },
     textField : {
         color: "white",
@@ -37,7 +41,7 @@ class ContactComponent extends React.Component {
         super(props);
         this.state = {
             name: "",
-            contactNumber: 0,
+            contactNumber: "",
             message : "",
             isFormDisabled : false,
             isButtonDisabled : false
@@ -71,6 +75,7 @@ class ContactComponent extends React.Component {
     }
 
     handleInput(e) {
+        console.log( e.currentTarget.name)
         let name = e.currentTarget.name;
         let value = e.currentTarget.value;
         this.setState({
@@ -107,29 +112,38 @@ class ContactComponent extends React.Component {
                     </div>
                     <div className="form-section">
                         <form id="formRef" hidden={this.state.isFormDisabled} className="form-details"  >
-                            <div className="form-control">
-                                <div> <AccountCircle classes={{root: classes.accountIcon}} /> </div>
-                                <TextField 
-                                    label="Name"  
-                                    InputProps={{
-                                        className: classes.textField
-                                }}/>
-                            </div>
-                            <div className="form-control">
-                                <div><CallIcon  classes={{root:classes.callIcon}} /></div>
-                                <div><TextField type="number" 
-                                    label="Contact Number" 
-                                    InputProps={{
-                                        className: classes.textField
-                            }}/></div>
+                            <div className="basic-details">
+                                <div className="form-control">
+                                    <div> <AccountCircle classes={{root: classes.accountIcon}} /> </div>
+                                    <TextField 
+                                        label="Name"
+                                        name="name"
+                                        value = {this.state.name}
+                                        onChange={this.handleInput}
+                                        InputProps={{
+                                            className: classes.textField
+                                    }}/>
+                                </div>
+                                <div className="form-control">
+                                    <div><CallIcon  classes={{root:classes.callIcon}} /></div>
+                                    <div><TextField type="number" 
+                                        label="Contact Number"
+                                        name="contactNumber"
+                                        onChange={this.handleInput}
+                                        value = {this.state.contactNumber}
+                                        InputProps={{
+                                            className: classes.textField
+                                }}/></div>
 
+                                </div>
                             </div>
+                           
                             <div className="form-control-textarea">
                                 <textarea  placeholder={"Leave a message"} name={"message"} value = {this.state.message} onChange={this.handleTextArea}></textarea>
                             </div>
                             <div hidden = {this.state.isButtonDisabled}>
                                 <Button  disabled={this.state.name == "" ? true : false}  variant="outlined"
-                                color="primary"  className={classes.margin}  onClick={this.haandleFormSubmit}>
+                                className={classes.margin}  onClick={this.haandleFormSubmit}>
                                     Send To Akshat
                                 </Button>
                             </div>
