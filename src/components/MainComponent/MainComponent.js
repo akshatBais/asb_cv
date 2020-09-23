@@ -17,6 +17,13 @@ const styles = theme => ({
             color : "#88F9FC"
         }
     },
+    infoIcon: {
+        float: "right",
+        "&:hover": {
+            cursor: "pointer",
+            color: "aqua"
+        }
+    },
     outlinedPrimary: {
         color: "red"
     }
@@ -82,7 +89,8 @@ class MainComponent extends React.Component {
                                     <div className="profile-name-section">
                                         <div className="profile-name-first">{this.state.name}</div>
                                         <div className="profile-name-middle">{this.state.middleName}</div>
-                                        <div className="profile-name-last">{this.state.lastName}</div>
+                                        <div className="profile-name-last">{this.state.lastName} <InfoIcon classes={{root: classes.infoIcon}} /></div>
+                                        <div></div>
                                         {/* <a className="profile-aboout-me" href="#experience"><InfoIcon  /></a> */}
 
                                     </div>

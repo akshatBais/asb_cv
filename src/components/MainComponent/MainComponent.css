@@ -90,7 +90,19 @@ ul {
     flex-wrap: wrap;
     display: flex;
 }
-.profile-name-first,.profile-name-middle, .profile-name-last {flex-grow: 0.1; margin-right: 10px; }
+@keyframes slideFromTop {
+    0% {
+      transform: translateY(-400%);
+    }
+  }
+@keyframes slideFromBottom {
+0% {
+    transform: translateY(200%);
+}
+}
+.profile-name-first{flex-grow: 0.1; margin-right: 10px;  animation: 2s ease-out 0s 1 slideFromTop; }
+.profile-name-middle{flex-grow: 0.1; margin-right: 10px;  animation: 2s ease-out 0s 1 slideFromBottom;}
+.profile-name-last {flex-grow: 0.1; margin-right: 0px;  animation: 2s ease-out 0s 1 slideFromTop;}
 .profile-name-first:hover , .profile-name-middle:hover , .profile-name-last:hover { color: rgb(144, 129, 129); }
 
 .profile-designation-section {
@@ -105,14 +117,21 @@ ul {
     width: 65%;;
     color: #58585f;
     font-size: x-large;
+    animation: 3s ease-out 0s 1 slideFromBottom;
 }
 
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-200%);
+    }
+  }
 
 .profile-picture {
     margin-top: 90px;
     border-radius: 5000px;
     height: 30vh !important;
     border: 1px solid aqua;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 
 }
 .profile-picture:hover { border : 2px solid aqua }

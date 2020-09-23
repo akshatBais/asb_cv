@@ -188,7 +188,7 @@ function AllProjectsComponent(props) {
         <Card classes={{root:props.isHidden == 2 ? classes.cardAfter : classes.card}}>
             <CardMedia
             className={classes.media}
-            image= {require ("../images/asb.jpg")}
+            image= {require ("../images/gp.png")}
             title="Google Plugin"
             />
             <CardActionArea>

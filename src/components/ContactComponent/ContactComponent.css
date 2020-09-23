@@ -63,6 +63,7 @@ p{
 .another-message {
     margin: 20px;
     font-size: large;
+    color: white;
 }
 
 .another-button {
@@ -98,9 +99,10 @@ textarea {
 }
 
 .thankyou-message {
-    margin: 30px;
+    margin: 0px;
     padding: 20px;
     font-family: sans-serif;
+    color: white;
 }
 
 .MuiSvgIcon-root {

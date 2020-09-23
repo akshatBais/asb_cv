@@ -37,7 +37,7 @@ return (
     <BottomNavigation className={classes.stickToBottom}>
         <Toolbar classes={{ root: classes.toolBarProps }}>
         <ul className="footer-properties">
-            <li className="footer-links"><CopyrightIcon classes={{root: classes.homeIcon }} /><span>Akshat Singh Bais</span></li>
+            <li className="footer-links"><CopyrightIcon classes={{root: classes.homeIcon }} viewBox="2 2 20 20" /><span>2020 akshatsinghbais</span></li>
             <li className="footer-links-twitter"><a href="https://in.linkedin.com/in/akshat-bais-588976157"><TwitterIcon classes={{root : classes.homeIcon }} /></a></li>
           </ul>
         </Toolbar>
