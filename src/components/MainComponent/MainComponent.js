@@ -4,7 +4,6 @@ import { Button } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import axios from 'axios';
 import download from 'downloadjs';
-import Grid from '@material-ui/core/Grid';
 import { withStyles } from "@material-ui/core/styles";
 import InfoIcon from '@material-ui/icons/Info';
 
@@ -39,12 +38,19 @@ class MainComponent extends React.Component {
             lastName: 'BAIS',
             designation : 'Full Stack Developer',
             brief : 'Passionate about technology and building applications that help people experience everyday life more easier',
-            loading: false
+            loading: false,
+            isInfoModalOpen : false,
+            anchor : null
         }
         this.downloadCv = this.downloadCv.bind(this);
+        this.handleModal = this.handleModal.bind(this);
+
     }
 
-
+    /**
+     * Following method is called when a player clicks on download button.
+     * It makes a call to an api and download the file in pdf format with the name provided in download method
+     */
     downloadCv() {
         console.log("downloading cv");
         this.setState({ loading: true });
@@ -64,7 +70,16 @@ class MainComponent extends React.Component {
         })
     }
 
-    render() {
+    /**
+     * Following method will open/close the modal/box 
+     * which shows information about the website.
+     */
+    async handleModal(event) {
+        debugger
+        this.setState({isInfoModalOpen : !this.state.isInfoModalOpen , anchor : event.currentTarget});
+    }
+
+    render() {                                                                                                                                                                  
         const {classes} = this.props;
 
         return (
@@ -77,7 +92,7 @@ class MainComponent extends React.Component {
                                 <div className="profile-picture-section">
                                     <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
                                     <div className="download-cv">
-                                        <Button variant="outlined" color="primary"
+                                        <Button variant="outlined" color="primary"                                                                  
                                         classes={{ root: classes.root}}
                                         disabled={this.state.loading} onClick={this.downloadCv}>
                                             <GetAppIcon />
@@ -89,9 +104,10 @@ class MainComponent extends React.Component {
                                     <div className="profile-name-section">
                                         <div className="profile-name-first">{this.state.name}</div>
                                         <div className="profile-name-middle">{this.state.middleName}</div>
-                                        <div className="profile-name-last">{this.state.lastName} <InfoIcon classes={{root: classes.infoIcon}} /></div>
-                                        <div></div>
-                                        {/* <a className="profile-aboout-me" href="#experience"><InfoIcon  /></a> */}
+                                        <div className="profile-name-last">{this.state.lastName}
+                                        </div>
+                                    <div>
+                                </div>
 
                                     </div>
                                     <div className="profile-designation-section">
@@ -109,12 +125,6 @@ class MainComponent extends React.Component {
                                 </div>
                               
                             </div>
-                            
-                            {/* <div className="body">Technology Enthusiast....
-                          Demonstrated hand-on with several technologies both on front-end and back-end side. Love coding, developing logics and algorithms.
-                          Apart from development I enjoy reading books.You can scroll down to know more about me or download my CV.
-                      </div> */}
-                            
                         </div>
                     </div>
 

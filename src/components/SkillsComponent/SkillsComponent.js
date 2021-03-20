@@ -132,17 +132,18 @@ class SkillsComponent extends React.Component {
                                 <div className="skills-title">Primary Skills</div>
                                     <ul>
                                     {this.state.primarySkills.map((value,index) => {
-                                        return  <Accordion classes={{root : classes.accordian}} expanded={this.state.isExpanded === index} onChange={this.handleChange(index)}>
+                                        return  <Accordion key={index} classes={{root : classes.accordian}} expanded={this.state.isExpanded === index} onChange={this.handleChange(index)}>
                                         <AccordionSummary expandIcon={<ExpandMoreIcon />} classes={{ expandIcon:classes.expandIcon}} >
                                         <Typography >
-                                            <div className="ps-name-image">
+                                            {/* <div className="ps-name-image"> */}
                                                 <img className="skill-img" src={value.imagePath} />
-                                            </div></Typography>
+                                            {/* </div> */}
+                                        </Typography>
                                         <Typography className={classes.secondaryHeading}> 
-                                            <div className="ps-name-progress">
+                                            {/* <div className="ps-name-progress"> */}
                                                 <LinearProgress classes={{root:classes.linearBar}}
                                                 variant="determinate" value={value.proficiency}  />
-                                            </div>
+                                            {/* </div> */}
                                         </Typography>
                                         </AccordionSummary>
                                         <AccordionDetails>
@@ -172,27 +173,27 @@ class SkillsComponent extends React.Component {
                         <div className="intermediate-skills">
                             <div className="skills-title">Other Skills</div>
                             <div className="is-section">
-                                <div class="is-name">
+                                <div className="is-name">
                                     <p>React</p>
                                     <CircularProgressWithLabel  value={60} />
                                     <p>60%</p>
                                 </div>
                                 
-                                <div class="is-name">
+                                <div className="is-name">
                                     <p>Mongo DB</p>
                                     <CircularProgressWithLabel value={70} />
                                     <p>70%</p>
 
                                 </div>
                                 
-                                <div class="is-name" >
+                                <div className="is-name" >
                                     <p>MySql</p>
                                     <CircularProgressWithLabel value={68} />
                                     <p>71%</p>
 
                                 </div>
                                 
-                                <div class="is-name">
+                                <div className="is-name">
                                     <p>Firebase</p>
                                     <CircularProgressWithLabel value={62} />
                                     <p>62%</p>

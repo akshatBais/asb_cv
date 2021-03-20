@@ -98,7 +98,7 @@ class ContactComponent extends React.Component {
         const {classes} = this.props;
         return (
 
-            <section className="contact" id="contact">
+            <section  id="contact" className="contact">
                 <Divider />
                 <div className="contact-information">
                     <div className="message">
