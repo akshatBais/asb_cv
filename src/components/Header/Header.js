@@ -67,7 +67,7 @@ function Header(props) {
       }} ModalProps={{ onBackdropClick: handleDrawerClose }}>
         <div className="drawer-items">
           <div className="sidebar-picture-container">
-            <img className="sidebar-picture" src={require("../../images/asb.jpg")} alt="" />
+            <img className="sidebar-picture" src={require("../../images/asbAnime.jpeg")} alt="" />
           </div>
           <div className={classes.dwarerItems}>
             <Divider />
