@@ -101,7 +101,7 @@ function AllProjectsComponent(props) {
                         Khel Play Rummy App : India's largest online gaming app
                     </Typography>
                     <Typography variant="body2" color="textSecondary" className={classes.description}>
-                    Working on re-architecturing the gaming app
+                    Used core java and multi threading for the gaming application . Also using MERN stack and Firebase
                 </Typography>
                 </CardContent>
             </CardActionArea>

@@ -17,6 +17,7 @@ const styles = theme => ({
         width: "100%"
     },
     secondaryHeading: {
+        margin : "15px 0px 0px 20px",
         color: "white",
         width: "100%"
     },
@@ -81,7 +82,7 @@ class SkillsComponent extends React.Component {
                 {
                     skill: "nodejs",
                     proficiency : 80,
-                    description: "3.5 years of experience in building enterprise and various applications using nodejs",
+                    description: "~4 years of experience in building enterprise & B/C and various applications using nodejs",
                     imagePath: require(baseUrl + "nodejs.png")
                 },
                 {
@@ -99,7 +100,7 @@ class SkillsComponent extends React.Component {
                 {
                     skill: "Javascript",
                     proficiency : 80,
-                    description: "I am biased towards it and is my first love in programming.",
+                    description: "4+ Years of experience with javascript using several libraries and framework.",
                     imagePath: require(baseUrl + "js.svg")
                 },
                 {
