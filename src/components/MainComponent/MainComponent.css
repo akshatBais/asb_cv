@@ -38,8 +38,22 @@
 }
 
 .download-cv {
-    margin-top : 40px;
+    margin-top : 30px;
     text-align: center;
+    display: flex;
+    /* width: 25vh; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+
+.resume-picture {
+    height: 60%;
+    width: 40%;
+}
+
+.download-cv-item {
+    margin-right: 12px;
+    width: 140px;
 }
 
 .column3{
@@ -73,6 +87,7 @@ ul {
     margin: 0 50px;
     flex-grow: 1;
     flex-shrink: 3;
+    text-align: center;
 }
 
 .profile-name-designation-section {
@@ -156,8 +171,13 @@ ul {
         margin-bottom: 5px;
     }
     .download-cv-small {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         margin-top: 50px;
+    }
+    .download-cv-item-sm {
+        margin: 10px;
+        width: 140px;
     }
     .profile-name-section {
         margin-top: 100px;

@@ -39,12 +39,35 @@ class MainComponent extends React.Component {
             designation : 'Full Stack Developer',
             brief : 'Passionate about technology and building applications that help people experience everyday life more easier',
             loading: false,
+            loadingLetter : false,
             isInfoModalOpen : false,
             anchor : null
         }
         this.downloadCv = this.downloadCv.bind(this);
         this.handleModal = this.handleModal.bind(this);
+        this.downloadLetter = this.downloadLetter.bind(this);
 
+    }
+
+    /**
+     * 
+     */
+    downloadLetter() {
+        this.setState({ loading: true });
+        axios("https://akshat-profile-node.herokuapp.com/download/akshatcv", {
+            method: 'GET',
+            responseType: 'blob'
+        }).then((res) => {
+            this.setState({ loading: false });
+            const blob = new Blob([res.data], { type: "application/pdf" })
+            download(blob, 'akshat_bais_cv.pdf');
+        }).catch(err => {
+            this.setState({ loading: false });
+            console.log("Error Occurred while downloafing")
+        }).finally(() => {
+            this.setState({ loading: false });
+
+        })
     }
 
     /**
@@ -52,7 +75,6 @@ class MainComponent extends React.Component {
      * It makes a call to an api and download the file in pdf format with the name provided in download method
      */
     downloadCv() {
-        console.log("downloading cv");
         this.setState({ loading: true });
         axios("https://akshat-profile-node.herokuapp.com/download/akshatcv", {
             method: 'GET',
@@ -92,12 +114,21 @@ class MainComponent extends React.Component {
                                 <div className="profile-picture-section">
                                     <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
                                     <div className="download-cv">
-                                        <Button variant="outlined" color="primary"                                                                  
-                                        classes={{ root: classes.root}}
-                                        disabled={this.state.loading} onClick={this.downloadCv}>
-                                            <GetAppIcon />
-                                            {(this.state.loading) ? 'Downloading...' : ' Download CV'}
-                                        </Button>
+                                        <div className="download-cv-item">
+                                            {/* <img className="resume-picture" src={require("../../images/resume.png")} alt="" /> */}
+                                            <Button style={{ minWidth : '110px'}} size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
+                                                <GetAppIcon style={{fontSize : 'large'}}/>
+                                                <div style={{fontSize : 'x-small'}}>{(this.state.loading) ? 'Downloading...' : ' Resume'}</div>
+                                            </Button>
+                                            
+                                        </div>
+                                        <div className="download-cv-item">
+                                            <Button style={{ width : '150px'}} size="small" variant="outlined" color="primary" disabled={this.state.loadingLetter} onClick={this.downloadLetter}>
+                                                <GetAppIcon style={{fontSize : 'large'}} />
+                                                <div style={{fontSize : 'x-small'}}>{(this.state.loadingLetter) ? 'Downloading...' : ' Cover Letter'}</div>
+                                            </Button>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="profile-name-designation-section">
@@ -116,11 +147,22 @@ class MainComponent extends React.Component {
                                     <div className="profile-brief-section">
                                         {this.state.brief}
                                     </div>
+
                                     <div className="download-cv-small">
+                                        <div className='download-cv-item-sm'>
                                         <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
-                                            <GetAppIcon />
-                                            {(this.state.loading) ? 'Downloading...' : ' Download CV'}
+                                            <GetAppIcon style={{fontSize : 'small'}}/>
+                                            <div style={{fontSize : 'xx-small'}}>{(this.state.loading) ? 'Downloading...' : ' Download CV'}</div>
                                         </Button>
+                                        </div>
+                                        
+                                        <div className='download-cv-item-sm'>
+                                        <Button size="small" variant="outlined" color="primary" disabled={this.state.loading} onClick={this.downloadCv}>
+                                            <GetAppIcon style={{fontSize : 'small'}}/>
+                                            <div style={{fontSize : 'xx-small'}}>{(this.state.loading) ? 'Downloading...' : ' Cover Letter'}</div>
+                                        </Button>
+                                        </div>
+
                                     </div>
                                 </div>
                               
