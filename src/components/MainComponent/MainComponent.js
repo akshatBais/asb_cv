@@ -90,7 +90,7 @@ class MainComponent extends React.Component {
                           
                             <div className="profile-picture-name-designation-section">
                                 <div className="profile-picture-section">
-                                    <img className="profile-picture" src={require("../../images/asb.jpg")} alt="" />
+                                    <img className="profile-picture" src={require("../../images/asbAnime.jpeg")} alt="" />
                                     <div className="download-cv">
                                         <Button variant="outlined" color="primary"                                                                  
                                         classes={{ root: classes.root}}
