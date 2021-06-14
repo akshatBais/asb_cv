@@ -1,5 +1,5 @@
 Following project is my CV using react backend is node.
-
+[Link to my website](https://akshatbais.github.io/asb_cv/)
 
 
 ### Akshat Singh Bais CV
@@ -29,4 +29,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 This deploys the code . Using pre-deploy and deploy scripts in
 package.json . Run this on gitbash . Make sure the git is install in the computer
 This will deploy the code to the page :
-https://akshatbais.github.io/akshat_singh_bais_cv/
+https://akshatbais.github.io/asb_cv/
